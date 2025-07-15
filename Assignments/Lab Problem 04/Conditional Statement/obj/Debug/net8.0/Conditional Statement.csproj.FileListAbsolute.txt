@@ -1,0 +1,4 @@
+/Volumes/Volume 1/CSE-PSTU/L-1 S-2/CCE-122/Assignments/Lab Problem 04/Conditional Statement/obj/Debug/net8.0/Conditional Statement.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Volume 1/CSE-PSTU/L-1 S-2/CCE-122/Assignments/Lab Problem 04/Conditional Statement/obj/Debug/net8.0/Conditional Statement.AssemblyInfoInputs.cache
+/Volumes/Volume 1/CSE-PSTU/L-1 S-2/CCE-122/Assignments/Lab Problem 04/Conditional Statement/obj/Debug/net8.0/Conditional Statement.AssemblyInfo.cs
+/Volumes/Volume 1/CSE-PSTU/L-1 S-2/CCE-122/Assignments/Lab Problem 04/Conditional Statement/obj/Debug/net8.0/Conditional Statement.csproj.CoreCompileInputs.cache
