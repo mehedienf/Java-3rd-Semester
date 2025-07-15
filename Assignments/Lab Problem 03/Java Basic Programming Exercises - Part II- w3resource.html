@@ -1,0 +1,2789 @@
+﻿<!DOCTYPE html>
+<html xmlns:fb="facebook.com/2008/fbml">
+<head>
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="/assets/mdl/material.min.css" />
+<link type="text/css" rel="stylesheet" href="/assets/mdl/additional.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0.0" />
+<link rel="shortcut icon" href="//www.w3resource.com/images/favicon.png">
+<title>Java Basic Programming Exercises - Part II- w3resource</title>
+<meta name="Keywords" content="w3resource, Java programming exercises, exercises, solution" />
+<meta name="Description" content="Practice with solution of exercises on Java basic: examples on variables, date, operator, input, output and more from w3resource." />
+<meta property="og:title" content="Java Basic Programming Exercises - Part II- w3resource" />
+<meta property="og:description" content="Practice with solution of exercises on Java basic: examples on variables, date, operator, input, output and more from w3resource." />
+<meta property="og:url" content="https://www.w3resource.com/java-exercises/basic/index1.php" />
+<meta property="og:image" content="//www.w3resource.com/w3r_images/java-exercises.png" />
+<meta property="og:site_name" content="w3resource" />
+
+<link rel="canonical" href="https://www.w3resource.com/java-exercises/basic/index1.php" /><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script type="text/javascript" src="//m.servedby-buysellads.com/monetization.js"></script>
+<style type="text/css">
+@-webkit-keyframes hover-swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 10deg);
+            transform: rotate3d(0, 0, 1, 10deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -7deg);
+            transform: rotate3d(0, 0, 1, -7deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes hover-swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 10deg);
+            transform: rotate3d(0, 0, 1, 10deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -7deg);
+            transform: rotate3d(0, 0, 1, -7deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+#hovercard {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+#hovercard .hover-section {
+  position: relative;
+  left: 14px;
+}
+
+#hovercard .hover-banner,
+#hovercard .hover-subset {
+  position: relative;
+  top: 14px;
+  left: -14px;
+}
+
+#hovercard .hover-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  border-radius: 8px;
+  background-color: #201b2a;
+  text-decoration: none;
+}
+
+#hovercard .hover-banner:before {
+  transition: all .2s ease-in-out;
+}
+
+#hovercard .hover-banner:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-top-right-radius: 0;
+  background-color: hsla(0, 0%, 100%, 0);
+  content: "";
+}
+
+#hovercard .hover-banner:hover {
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-animation-name: hover-swing;
+          animation-name: hover-swing;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+#hovercard .hover-banner:hover:before {
+  width: 100%;
+  height: 100%;
+  border-width: 60px;
+  border-top-right-radius: 100%;
+  background-color: hsla(0, 0%, 100%, .08);
+}
+
+#hovercard .hover-ad {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 9px;
+}
+
+#hovercard .hover-banner {
+  display: flex;
+  margin-bottom: 14px;
+  height: 140px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, .1);
+
+  justify-content: center;
+  align-items: center;
+}
+
+#hovercard .hover-logo {
+  width: 125px;
+  height: 50px;
+}
+
+#hovercard .hover-subset {
+  display: flex;
+}
+
+#hovercard .hover-icon {
+  margin-right: 10px;
+  padding: 4px;
+  height: 20px;
+  border: solid 5px #201b2a;
+  border-radius: 50%;
+}
+
+#hovercard .hover-description {
+  margin-bottom: 30px;
+  color: #ddd;
+  font-size: 14px;
+}
+</style>
+
+
+<script>
+window.FontAwesomeKitConfig = {"asyncLoading":{"enabled":false},"autoA11y":{"enabled":true},"baseUrl":"https://kit-free.fontawesome.com","detectConflictsUntil":null,"license":"free","method":"css","minify":{"enabled":true},"v4FontFaceShim":{"enabled":true},"v4shim":{"enabled":true},"version":"latest"};
+!function(){function r(e){var t,n=[],i=document,o=i.documentElement.doScroll,r="DOMContentLoaded",a=(o?/^loaded|^c/:/^loaded|^i|^c/).test(i.readyState);a||i.addEventListener(r,t=function(){for(i.removeEventListener(r,t),a=1;t=n.shift();)t()}),a?setTimeout(e,0):n.push(e)}!function(){if(!(void 0===window.Element||"classList"in document.documentElement)){var e,t,n,i=Array.prototype,o=i.push,r=i.splice,a=i.join;d.prototype={add:function(e){this.contains(e)||(o.call(this,e),this.el.className=this.toString())},contains:function(e){return-1!=this.el.className.indexOf(e)},item:function(e){return this[e]||null},remove:function(e){if(this.contains(e)){for(var t=0;t<this.length&&this[t]!=e;t++);r.call(this,t,1),this.el.className=this.toString()}},toString:function(){return a.call(this," ")},toggle:function(e){return this.contains(e)?this.remove(e):this.add(e),this.contains(e)}},window.DOMTokenList=d,e=Element.prototype,t="classList",n=function(){return new d(this)},Object.defineProperty?Object.defineProperty(e,t,{get:n}):e.__defineGetter__(t,n)}function d(e){for(var t=(this.el=e).className.replace(/^\s+|\s+$/g,"").split(/\s+/),n=0;n<t.length;n++)o.call(this,t[n])}}();function a(e){var t,n,i,o;prefixesArray=e||["fa"],prefixesSelectorString="."+Array.prototype.join.call(e,",."),t=document.querySelectorAll(prefixesSelectorString),Array.prototype.forEach.call(t,function(e){n=e.getAttribute("title"),e.setAttribute("aria-hidden","true"),i=!e.nextElementSibling||!e.nextElementSibling.classList.contains("sr-only"),n&&i&&((o=document.createElement("span")).innerHTML=n,o.classList.add("sr-only"),e.parentNode.insertBefore(o,e.nextSibling))})}var d=function(e,t){var n=document.createElement("link");n.href=e,n.media="all",n.rel="stylesheet",n.id="font-awesome-5-kit-css",t&&t.detectingConflicts&&t.detectionIgnoreAttr&&n.setAttributeNode(document.createAttribute(t.detectionIgnoreAttr)),document.getElementsByTagName("head")[0].appendChild(n)},c=function(e,t){!function(e,t){var n,i=t&&t.before||void 0,o=t&&t.media||void 0,r=window.document,a=r.createElement("link");if(t&&t.detectingConflicts&&t.detectionIgnoreAttr&&a.setAttributeNode(document.createAttribute(t.detectionIgnoreAttr)),i)n=i;else{var d=(r.body||r.getElementsByTagName("head")[0]).childNodes;n=d[d.length-1]}var c=r.styleSheets;a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(r.body)return t();setTimeout(function(){e(t)})}(function(){n.parentNode.insertBefore(a,i?n:n.nextSibling)});var s=function(e){for(var t=a.href,n=c.length;n--;)if(c[n].href===t)return e();setTimeout(function(){s(e)})};function l(){a.addEventListener&&a.removeEventListener("load",l),a.media=o||"all"}a.addEventListener&&a.addEventListener("load",l),(a.onloadcssdefined=s)(l)}(e,t)},e=function(e,t,n){var i=t&&void 0!==t.autoFetchSvg?t.autoFetchSvg:void 0,o=t&&void 0!==t.async?t.async:void 0,r=t&&void 0!==t.autoA11y?t.autoA11y:void 0,a=document.createElement("script"),d=document.scripts[0];a.src=e,void 0!==r&&a.setAttribute("data-auto-a11y",r?"true":"false"),i&&(a.setAttributeNode(document.createAttribute("data-auto-fetch-svg")),a.setAttribute("data-fetch-svg-from",t.fetchSvgFrom)),o&&a.setAttributeNode(document.createAttribute("defer")),n&&n.detectingConflicts&&n.detectionIgnoreAttr&&a.setAttributeNode(document.createAttribute(n.detectionIgnoreAttr)),d.parentNode.appendChild(a)};function s(e,t){var n=t&&t.addOn||"",i=t&&t.baseFilename||e.license+n,o=t&&t.minify?".min":"",r=t&&t.fileSuffix||e.method,a=t&&t.subdir||e.method;return e.baseUrl+"/releases/"+("latest"===e.version?"latest":"v".concat(e.version))+"/"+a+"/"+i+o+"."+r}var t,n,i,o,l;try{if(window.FontAwesomeKitConfig){var u,f=window.FontAwesomeKitConfig,m={detectingConflicts:f.detectConflictsUntil&&new Date<=new Date(f.detectConflictsUntil),detectionIgnoreAttr:"data-fa-detection-ignore",detectionTimeoutAttr:"data-fa-detection-timeout",detectionTimeout:null};"js"===f.method&&(o=m,l={async:(i=f).asyncLoading.enabled,autoA11y:i.autoA11y.enabled},"pro"===i.license&&(l.autoFetchSvg=!0,l.fetchSvgFrom=i.baseUrl+"/releases/"+("latest"===i.version?"latest":"v".concat(i.version))+"/svgs"),i.v4shim.enabled&&e(s(i,{addOn:"-v4-shims",minify:i.minify.enabled})),e(s(i,{minify:i.minify.enabled}),l,o)),"css"===f.method&&function(e,t){var n,i=a.bind(a,["fa","fab","fas","far","fal","fad"]);e.autoA11y.enabled&&(r(i),n=i,"undefined"!=typeof MutationObserver&&new MutationObserver(n).observe(document,{childList:!0,subtree:!0})),e.v4shim.enabled&&(e.license,e.asyncLoading.enabled?c(s(e,{addOn:"-v4-shims",minify:e.minify.enabled}),t):d(s(e,{addOn:"-v4-shims",minify:e.minify.enabled}),t));e.v4FontFaceShim.enabled&&(e.asyncLoading.enabled?c(s(e,{addOn:"-v4-font-face",minify:e.minify.enabled}),t):d(s(e,{addOn:"-v4-font-face",minify:e.minify.enabled}),t));var o=s(e,{minify:e.minify.enabled});e.asyncLoading.enabled?c(o,t):d(o,t)}(f,m),m.detectingConflicts&&((u=document.currentScript.getAttribute(m.detectionTimeoutAttr))&&(m.detectionTimeout=u),document.currentScript.setAttributeNode(document.createAttribute(m.detectionIgnoreAttr)),t=f,n=m,r(function(){var e=document.createElement("script");n&&n.detectionIgnoreAttr&&e.setAttributeNode(document.createAttribute(n.detectionIgnoreAttr)),n&&n.detectionTimeoutAttr&&n.detectionTimeout&&e.setAttribute(n.detectionTimeoutAttr,n.detectionTimeout),e.src=s(t,{baseFilename:"conflict-detection",fileSuffix:"js",subdir:"js",minify:t.minify.enabled}),e.async=!0,document.body.appendChild(e)}))}}catch(e){}}();
+</script>
+<script type="text/javascript">
+	(function(){
+		var bsa_optimize=document.createElement('script');
+		bsa_optimize.type='text/javascript';
+		bsa_optimize.async=true;
+		bsa_optimize.src='https://cdn4.buysellads.net/pub/w3resource.js?'+(new Date()-new Date()%600000);
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa_optimize);
+	})();
+</script>
+</head>
+<body>
+<div id="w3r_body">
+<style type="text/css">
+article a {
+text-decoration: none	
+}
+.mdl-menu {
+min-width: 1024px;	
+}
+.mdl-menu__item {
+height: 24px;
+line-height: 24px;
+font-size: 1em;
+padding: 3px	
+}
+/*.mdl-menu__item {
+height: 48px;
+width:48px;
+}*/
+.header_notice a{
+color: #fff
+}
+ul.nav.nav-list li {
+font-size: 1em	
+}
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+color: #2a69a8;	
+font-weight: 600;
+font-size: 1.2em
+}
+.material-icons.home_link { font-size: 48px; }
+#drawer_menu_topic_head1,#drawer_menu_topic_head2,#drawer_menu_topic_head3,#drawer_menu_topic_head4,
+#drawer_menu_topic_head5,#drawer_menu_topic_head6,#drawer_menu_topic_head7 {
+color: #ff6a01;
+font-size: 1.5em;
+font-weight: 700
+}
+.mdl-layout-title a {
+color: #fff
+}
+@media screen and (max-width: 1024px) {	
+	.drawer_logo {display: none}
+}
+@media screen and (max-width: 568px) {
+#sidebar_right {
+display: none
+}
+}	
+@media screen and (max-width: 768px) {
+ul.nav.nav-list {
+display: none
+}
+}	
+
+.w3r_donate_link {
+font-weight: 800
+}
+.w3r_donate_link i{
+margin-right: 5px;
+margin-top: 20px;
+}
+.w3r_donate_link .gz{
+margin-top: -30px
+}
+.w3r_donate_link a i{
+color: #fff	
+}
+.w3r_donate_link a:hover{
+color: #ff0a01
+}
+.w3r_donate_link a:visited{
+color: #fff
+}
+
+.w3r_donate_link a:hover{
+color: #ff0a01
+}
+.w3r_donate_link a:visited{
+color: #fff
+}
+.w3r_donate_link a:link{
+color: #fff	
+}
+.w3r_donate_link a:hover{
+color: #ff0a01
+}
+.w3r_donate_link a:visited{
+color: #fff
+}
+pre.output_additional_one {
+display: block;
+background-color: #f8f8f8;
+color: #099;
+padding: 1%;
+overflow: auto;
+border-left: 10px solid #F49586;
+}
+pre.output_additional_two {
+display: block;
+background-color: #f8f8f8;
+color: #099;
+padding: 1%;
+overflow: auto;
+border-left: 10px solid #F0E4CE;
+}
+pre.output_additional_three {
+display: block;
+background-color: #f8f8f8;
+color: #099;
+padding: 1%;
+overflow: auto;
+border-left: 10px solid #A1C9D7;
+}
+ul.w3r_list li {
+font-size: 16px
+}
+</style>
+<style type="text/css">
+   .gsc-control-cse
+    {
+        height:20px;
+        background-color: rgb(63,81,181);
+        border:0;
+        margin-top: -15px;
+        !important;     
+    }
+    .gsc-control-cse-en
+    {
+        height:20px;
+        background-color: rgb(63,81,181);
+        border:0;
+        margin-top: -15px;
+        !important;
+    }
+.widget {display: none !important;}
+@media (max-width:629px) {
+  .customSearch {
+    display: none;
+  }
+}
+</style>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HCW88J419P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HCW88J419P');
+</script>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<header class="mdl-layout__header">
+<div class="mdl-layout__header-row">
+
+<span class="mdl-layout-title"><a href="https://www.w3resource.com/index.php">w3resource</a></span>
+
+<div class="mdl-layout-spacer mdl-layout--large-screen-only"></div>
+
+<div class="mdl-layout-spacer mdl-layout--large-screen-only"></div>
+<nav class="mdl-navigation mdl-layout--large-screen-only">
+
+</nav>
+
+<nav class="mdl-navigation mdl-layout--large-screen-only">
+<div class="customSearch" style="border:0px solid;margin:-20px;width:400px;height:auto;">
+<script>
+  (function() {
+    var cx = '013584948386948090933:pjqiqxq1drs';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+    })();
+ </script>
+<gcse:search enableAutoComplete="true"></gcse:search>
+</div>
+</nav>
+</div>
+</header>
+
+<main class="mdl-layout__content">
+<div class="page-content">
+
+
+
+<div class="mdl-grid">
+<div class="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--2-col mdl-cell--hide-phone">
+<ul class="nav nav-list"><li><a href="/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement">Home</a></li><li class="nav-header">&#9660;Java Exercises</li><li><a href="/java-exercises/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Home</a></li><li><a href="/java-exercises/basic/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Basic Part-I</a></li><li class="active"><a href="/java-exercises/basic/index1.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement">Basic Part-II</a></li><li><a href="/java-exercises/datatypes/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Data Types</a></li><li><a href="/java-exercises/conditional-statement/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Conditional Statement</a></li><li><a href="/java-exercises/recursive/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Recursive Methods</a></li><li><a href="/java-exercises/java-enum-types.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Java Enum Types</a></li><li><a href="/java-exercises/exception/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Exception Handling</a></li><li><a href="/java-exercises/array/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Array</a></li><li><a href="/java-exercises/index-inheritance.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Java Inheritance</a></li><li><a href="/java-exercises/index-abstract.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Java Abstract Classes</a></li><li><a href="/java-exercises/thread/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Java Thread</a></li><li><a href="/java-exercises/multithreading/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Java Multithreading</a></li><li><a href="/java-exercises/lambda/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Java Lambda expression</a></li><li><a href="/java-exercises/generic/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Java Generic Method</a></li><li><a href="/java-exercises/unittest/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Unit Test</a></li><li><a href="/java-exercises/oop/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Object-Oriented Programming</a></li><li><a href="/java-exercises/index-interface.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Java Interface</a></li><li><a href="/java-exercises/encapsulation/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Java Encapsulation</a></li><li><a href="/java-exercises/index-polymorphism.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Java Polymorphism</a></li><li><a href="/java-exercises/stack/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Stack</a></li><li><a href="/java-exercises/string/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> String</a></li><li><a href="/java-exercises/stream/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Streams</a></li><li><a href="/java-exercises/datetime/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Date Time</a></li><li><a href="/java-exercises/method/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Method</a></li><li><a href="/java-exercises/numbers/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Numbers</a></li><li><a href="/java-exercises/io/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> File Input-Output</a></li><li><a href="/java-exercises/collection/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Collection</a></li><li><a href="/java-exercises/math/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Math</a></li><li><a href="/java-exercises/sorting/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Sorting</a></li><li><a href="/java-exercises/search/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Search</a></li><li><a href="/java-exercises/re/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> Regular Expression</a></li><li class="nav-header">&#9660;JavaFx Exercises</li><li><a href="/java-exercises/javafx/index.php" itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> JavaFx Exercises Home</a></li><li><a href itemscope itemtype="http://schema.org/WebPageElement/SiteNavigationElement"> ..More to come..</a></li></ul> </div>
+<div class="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col">
+<article itemscope itemtype="https://schema.org/TechArticle">
+<h1 class="heading" id="h_one">Java Basic Programming : Exercises, Practice, Solution</h1>
+<time itemprop="dateModified" datetime="December 05 2023 18:03:58.">Last update on December 05 2023 18:03:58 (UTC/GMT +8 hours)</time>
+<style type="text/css">
+@media screen and (max-width: 1920px) {
+#h1_banner_block {display: block}
+#h1_banner_block_mobile {display: none}
+#h1_banner_mobile_smallest {display: none}
+}
+@media screen and (max-width: 600px) {
+#h1_banner_block {display: none}
+#h1_banner_block_mobile {display: block}
+#h1_banner_mobile_smallest {display: none}	
+}
+@media screen and (max-width: 480px) {
+#h1_banner_block {display: none}
+#h1_banner_block_mobile {display: none}
+#h1_banner_mobile_smallest {display: block}	
+}
+</style>
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--12-col" id="h1_banner_block">
+
+<ins class="adsbygoogle" style="display:inline-block;width:468px;height:80px" data-ad-client="ca-pub-2153208817642134" data-ad-slot="9915778577"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div id="bsa-zone_1634824896174-3_123456"></div>
+</div>
+<div class="mdl-cell mdl-cell--12-col" id="h1_banner_mobile_smallest">
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2153208817642134" data-ad-slot="5610855762" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+<h2>Java Basic Exercises [151 to 249 exercises with solution]</h2>
+<p class="heading">[<strong><em>An editor is available at the bottom of the page to write and execute the scripts.</em></strong>&nbsp;<a href="#editorr">Go to the editor</a>] </p>
+<p><strong>151.</strong> Write a Java program to find the value of a specified expression. <br>
+<p>a) 101 + 0) / 3<br>
+b) 3.0e-6 * 10000000.1<br>
+c) true && true<br>
+d) false && true<br>
+e) (false && false) || (true && true)<br>
+f) (false || false) && (true && true)</p>
+<em>Expected Output</em> :<br>
+(101 + 0) / 3)-> 33<br>
+(3.0e-6 * 10000000.1)-> 30.0000003<br>
+(true && true)-> true<br>
+(false && true)-> false<br>
+((false && false) || (true && true))-> true<br>
+(false || false) && (true && true)-> false</p>
+<p><a href="java-basic-exercise-151.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>152.</strong> Write a Java program that accepts four integers from the user and prints equal if all four are equal, and not equal otherwise. </p>
+<p><em>Sample Output</em>:<br>
+Input first number: 25<br>
+Input second number: 37<br>
+Input third number: 45<br>
+Input fourth number: 23<br>
+Numbers are not equal!</p>
+<p><a href="java-basic-exercise-152.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>153.</strong> Write a Java program that accepts two double variables and test if both strictly between 0 and 1 and false otherwise. </p>
+<p><em>Sample Output:</em><br>
+Input first number: 5<br>
+Input second number: 1<br>
+false</p>
+<p><a href="java-basic-exercise-153.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>154.</strong> Write a Java program to print the contents of a two-dimensional Boolean array where t represents true and f represents false. </p>
+<p>Sample array:<br>
+array = {{true, false, true},<br>
+{false, true, false}};<br>
+<em>Expected Output</em> :<br>
+t f t <br>
+f t f </p>
+<p><a href="java-basic-exercise-154.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>155.</strong> Write a Java program to print an array after changing the rows and columns of a two-dimensional array. </p>
+<p> Original Array:<br>
+10 20 30<br>
+40 50 60 <br>
+After changing the rows and columns of the said array:10 40 <br>
+20 50 <br>
+30 60 </p>
+<p><a href="java-basic-exercise-155.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>156.</strong> Write a Java program that returns the largest integer but not larger than the base-2 logarithm of a specified integer. </p>
+<p>Original Number: 2350<br>
+Result: 115</p>
+<p><a href="java-basic-exercise-156.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>157.</strong> Write a Java program to prove that Euclid’s algorithm computes the greatest common divisor of two integers that have positive values. </p>
+<p> According to Wikipedia "The Euclidean algorithm is based on the principle that the greatest common divisor of two numbers does not change if the larger number is replaced by its difference with the smaller number. For example, 21 is the GCD of 252 and 105 (as 252 = 21 × 12 and 105 = 21 × 5), and the same number 21 is also the GCD of 105 and 252 − 105 = 147. Since this replacement reduces the larger of the two numbers, repeating this process gives successively smaller pairs of numbers until the two numbers become equal. When that occurs, they are the GCD of the original two numbers. By reversing the steps, the GCD can be expressed as a sum of the two original numbers each multiplied by a positive or negative integer, e.g., 21 = 5 × 105 + (−2) × 252. The fact that the GCD can always be expressed in this way is known as Bézout's identity."</p>
+<p><em>Expected Output:</em><br>
+result: 24<br>
+result: 1</p>
+<p><a href="java-basic-exercise-157.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>158.</strong> Write a Java program to create a two-dimensional array (m x m) A[][] such that A[i][j] is false if I and j are prime otherwise A[i][j] becomes true. </p>
+<p><em>Sample Output: </em><br>
+true true true <br>
+true true true <br>
+true true false </p>
+<p><a href="java-basic-exercise-158.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>159.</strong> Write a Java program to find the k largest elements in a given array. Elements in the array can be in any order. </p>
+<p><em>Expected Output:</em><br>
+Original Array: <br>
+[1, 4, 17, 7, 25, 3, 100]<br>
+3 largest elements of the said array are:<br>
+100 25 17 </p>
+<p><a href="java-basic-exercise-159.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>160.</strong> Write a Java program to find the k smallest elements in a given array. Elements in the array can be in any order. </p>
+<p><em>Expected Output:</em><br>
+Original Array: <br>
+[1, 4, 17, 7, 25, 3, 100]<br>
+3 largest elements of the said array are:<br>
+100 25 17 </p>
+<p><a href="java-basic-exercise-160.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>161.</strong> Write a Java program to find the kth smallest and largest element in a given array. Elements in the array can be in any order. </p>
+<p><em>Expected Output:</em><br>
+Original Array: <br>
+[1, 4, 17, 7, 25, 3, 100]<br>
+K'th smallest element of the said array: <br>
+3 <br>
+K'th largest element of the said array:<br>
+25 </p>
+<p><a href="java-basic-exercise-161.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>162.</strong> Write a Java program that finds numbers greater than the average of an array. </p>
+<p><em>Expected Output:</em><br>
+Original Array: <br>
+[1, 4, 17, 7, 25, 3, 100]<br>
+The average of the said array is: 22.0<br>
+The numbers in the said array that are greater than the average are: <br>
+25<br>
+100 </p>
+<p><a href="java-basic-exercise-162.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>163.</strong> Write a Java program that will accept an integer and convert it into a binary representation. Now count the number of bits equal to zero in this representation. </p>
+<p><em>Expected Output:</em><br>
+Input first number: 25<br>
+Binary representation of 25 is: 11001<br>
+Number of zero bits: 2</p>
+<p><a href="java-basic-exercise-163.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>164.</strong> Write a Java program to divide the two given integers using the subtraction operator. </p>
+<p> <em>Expected Output:</em><br>
+Input the dividend: 625<br>
+Input the divider: 25<br>
+Result: 25.0</p>
+<p><a href="java-basic-exercise-164.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>165.</strong> Write a Java program to move every positive number to the right and every negative number to the left of a given array of integers. </p>
+<p><em>Expected Output:</em><br>
+Original array: [-2, 3, 4, -1, -3, 1, 2, -4, 0]<br>
+Result: [-4, -3, -2, -1, 0, 1, 2, 3, 4]</p>
+<p><a href="java-basic-exercise-165.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>166.</strong> Write a Java program to transform a given integer into String format. </p>
+<p><em>Expected Output:</em><br>
+Input an integer: 35<br>
+String format of the said integer: 35</p>
+<p><a href="java-basic-exercise-166.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>167.</strong> Write a Java program to move every zero to the right side of a given array of integers. </p>
+<p>Original array: [0, 3, 4, 0, 1, 2, 5, 0]<br>
+Result: [3, 4, 1, 2, 5, 0, 0, 0]</p>
+<p><a href="java-basic-exercise-167.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>168.</strong> Write a Java program to multiply two given integers without using the multiply operator (*). </p>
+<p>Input the first number: 25<br>
+Input the second number: 5<br>
+Result: 125</p>
+<p><a href="java-basic-exercise-168.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>169.</strong> Write a Java program to reverse a sentence (assume a single space between two words) without reverse every word. </p>
+<p>Input a string: The quick brown fox jumps over the lazy dog<br>
+Result: dog lazy the over jumps fox brown quick The</p>
+<p><a href="java-basic-exercise-169.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>170.</strong> Write a Java program to find the length of the longest consecutive sequence in a given array of integers. </p>
+<p>Original array: [1, 1, 2, 3, 3, 4, 5, 2, 4, 5, 6, 7, 8, 9, 6, -1, -2]<br>
+7</p>
+<p><a href="java-basic-exercise-170.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>171.</strong> Write a Java program to accept two strings and test if the second string contains the first one. </p>
+<p>Input first string: Once in a blue moon<br>
+Input second string: See eye to eye<br>
+If the second string contains the first one? false</p>
+<p><a href="java-basic-exercise-171.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>172.</strong> Write a Java program to get the number of elements in a given array of integers that are smaller than the integer in another given array of integers. </p>
+<p><em>Expected Output:</em><br>0<br>
+3<br>
+7</p>
+<p><a href="java-basic-exercise-172.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>173.</strong> Write a Java program to find the median of the numbers inside the window (size k) at each step in a given array of integers with duplicate numbers. Move the window to the array start. </p>
+<p>Sample Output:<br>
+{|1, 2, 3|, 4, 5, 6, 7, 8, 8} -> Return median 2<br>
+{1, |2, 3, 4|, 5, 6, 7, 8, 8} -> Return median 3<br>
+{1, 2, |3, 4, 5|, 6, 7, 8, 8} -> Return median 4<br>
+{1, 2, 3, |4, 5, 6|, 7, 8, 8} -> Return median 5<br>
+{1, 2, 3, 4, |5, 6, 7|, 8, 8} -> Return median 6<br>
+{1, 2, 3, 4, 5, |6, 7, 8|, 8} -> Return median 7<br>
+{1, 2, 3, 4, 5, 6, |7, 8, 8|} -> Return median 8<br>
+Result array {2, 3, 4, 5, 6, 7, 8}</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original array: [1, 2, 3, 4, 5, 6, 7, 8, 8]
+
+Value of k: 3
+
+Result: 
+2
+3
+4
+5
+6
+7
+8
+</pre>
+<p><a href="java-basic-exercise-173.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>174.</strong> Write a Java program to find the maximum number inside the number in the window (size k) at each step in a given array of integers with duplicate numbers. Move the window to the top of the array. </p>
+<p>Sample output:<br>
+{|1, 2, 3|, 4, 5, 6, 7, 8, 8} -> Return maximum 3<br>
+{1, |2, 3, 4|, 5, 6, 7, 8, 8} -> Return maximum 4<br>
+{1, 2, |3, 4, 5|, 6, 7, 8, 8} -> Return maximum 5<br>
+{1, 2, 3, |4, 5, 6|, 7, 8, 8} -> Return maximum 6<br>
+{1, 2, 3, 4, |5, 6, 7|, 8, 8} -> Return maximum 7<br>
+{1, 2, 3, 4, 5, |6, 7, 8|, 8} -> Return maximum 8<br>
+{1, 2, 3, 4, 5, 6, |7, 8, 8|} -> Return maximum 8<br>
+Result array {3, 4, 5, 6, 7, 8, 8}<br></p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original array: [1, 2, 3, 4, 5, 6, 7, 8, 8]
+
+Value of k: 3
+
+Result: 
+2
+3
+4
+5
+6
+7
+8
+</pre>
+<p><a href="java-basic-exercise-174.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>175.</strong> Write a Java program to delete a specified node in the middle of a singly linked list. </p>
+<p>Sample Singly linked list: 10->20->30->40->50<br>
+Delete the fourth node i.e. 40<br>
+Result: 10->20->30->50<br>
+<em>Expected Output:</em></p>
+<pre>
+Original Linked list:
+10->20->30->40->50
+After deleting the fourth node, Linked list becomes:
+10->20->30->50
+</pre>
+<p><a href="java-basic-exercise-175.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>176.</strong> Write a Java program that partitions an array of integers into even and odd numbers. </p>
+<p><em>Expected Output</em></p>
+<pre>
+Original array: [7, 2, 4, 1, 3, 5, 6, 8, 2, 10]
+After partition the said array becomes: [10, 2, 4, 2, 8, 6, 5, 3, 1, 7]
+</pre>
+<p><a href="java-basic-exercise-176.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>177.</strong> Write a Java program to get an updated binary tree with the same structure and value as a given binary tree. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original Treenode:
+4
+5
+2
+3
+1
+
+Clone of the said Treenode:
+4
+5
+2
+3
+1</pre>
+<p><a href="java-basic-exercise-177.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>178.</strong> Write a Java program to find the longest increasing continuous subsequence in a given array of integers. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original array: [10, 11, 12, 13, 14, 7, 8, 9, 1, 2, 3]
+Size of longest increasing continuous subsequence: 5</pre>
+<p><a href="java-basic-exercise-178.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>179.</strong> Write a Java program to add one to a positive number represented as an array of digits. </p>
+<p>Sample array: [9, 9, 9, 9] which represents 9999<br>
+Output: [1, 0, 0, 0, 0].</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original array: [9, 9, 9, 9]
+Array of digits: [1, 0, 0, 0, 0]</pre>
+<p><a href="java-basic-exercise-179.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>180.</strong> Write a Java program to swap two adjacent nodes in a linked list. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original Linked list:
+10->20->30->40->50
+
+After swiping Linked list becomes:
+20->10->40->30->50</pre>
+<p><a href="java-basic-exercise-180.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>181.</strong> Write a Java program to find the length of the last word in a given string. The string contains upper/lower-case alphabets and empty space characters like ' '. </p>
+<p>Sample Output: </p>
+<pre class="output">
+Original String: The length of last word
+Length of the last word of the above string: 4
+</pre>
+<p><a href="java-basic-exercise-181.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>182.</strong> Write a Java program to check if two binary trees are identical. Assume that two binary trees have the same structure and every identical position has the same value. </p>
+<p>Sample Output: </p>
+<pre class="output">
+Comparing TreeNode a and TreeNode b:
+false
+
+Comparing TreeNode b and TreeNode c:
+true
+</pre>
+<p><a href="java-basic-exercise-182.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>183.</strong> Write a Java program to accept a positive number and repeatedly add all its digits until the result has only one digit. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input a positive integer:  25
+7</pre>
+<p><a href="java-basic-exercise-183.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>184.</strong> Write a Java program to find the length of the longest consecutive sequence path in a given binary tree. <br>
+Note: The longest consecutive path need to be from parent to child.</p>
+<img src="https://www.w3resource.com/w3r_images/java-basic-image-exercise-184.png" alt="Java Basic Exercises: Find the length of the longest consecutive sequence path of a given binary tree." style="max-width:100%;display:block;height:auto;border: 2px solid silver;" /><br>
+<p><em>Expected Output:</em></p>
+<pre>
+Length of the longest consecutive sequence path:  4
+</pre>
+<p><a href="java-basic-exercise-184.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>185.</strong> Write a Java program to check if two strings are isomorphic or not. <br>
+<p><em>Expected Output:</em></p>
+<pre>
+Is abca and zbxz are Isomorphic? true
+</pre>
+<p><a href="java-basic-exercise-185.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>186.</strong> Write a Java program to check if a number is a strobogrammatic number. The number is represented as a string. </p>
+<p>According to Wikipedia "A strobogrammatic number is a number whose numeral is rotationally symmetric, so that it appears the same when rotated 180 degrees. In other words, the numeral looks the same right-side up and upside down (e.g., 69, 96, 1001). A strobogrammatic prime is a strobogrammatic number that is also a prime number, i.e., a number that is only divisible by one and itself (e.g., 11). It is a type of ambigram, words and numbers that retain their meaning when viewed from a different perspective, such as palindromes."<br>
+The first few strobogrammatic numbers are:<br>
+0, 1, 8, 11, 69, 88, 96, 101, 111, 181, 609, 619, 689, 808, 818, 888, 906, 916, 986, 1001, 1111, 1691, 1881, 1961, 6009, 6119, 6699, 6889, 6969, 8008, 8118, 8698, 8888, 8968, 9006, 9116, 9696, 9886, 9966, ... </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Is 9006 is Strobogrammatic? true
+</pre>
+<p><a href="java-basic-exercise-186.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>187.</strong> Write a Java program to find the index of the first non-repeating character in a given string. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Index of first non-repeating character in 'google' is: 4
+</pre>
+<p><a href="java-basic-exercise-187.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>188.</strong> Write a Java program to find all the start indices of a given string's anagrams in another given string. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original String: zyxwyxyxzwxyz
+Starting anagram indices of xyz: [0, 6, 10]
+</pre>
+<p><a href="java-basic-exercise-188.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>189.</strong> Write a Java program to two non-negative integers num1 and num2 represented as strings, return the sum of num1 and num2. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+'123' + '456' = 579
+</pre>
+<p><a href="java-basic-exercise-189.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>190.</strong> Write a Java program to find the missing string from two given strings. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Missing string: [Solution]
+</pre>
+<p><a href="java-basic-exercise-190.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>191.</strong> Write a Java program to test whether there are two integers x and y such that x^2 + y^2 is equal to a given positive number. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input a positive integer:  25
+Is 25 sum of two square numbers? true
+</pre>
+<p><a href="java-basic-exercise-191.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>192.</strong> Write a Java program to rearrange the alphabets in the order followed by the sum of digits in a given string containing uppercase alphabets and integer digits (from 0 to 9). </p>
+<p><em>Expected Output:</em></p>
+<pre>
+ADEHNS23
+</pre>
+<p><a href="java-basic-exercise-192.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>193.</strong> Write a Java program that accepts an integer and sums the elements from all possible subsets of a set formed by the first n natural numbers. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input a positive integer:  25
+Sum of subsets of n is : 1157627904
+</pre>
+<p><a href="java-basic-exercise-193.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>194.</strong> Write a Java program to determine the all positions of a given number in a given matrix. If the number is not found print ("Number not found!"). </p>
+<p><em>Expected Output:</em></p>
+<pre>
+(0,2)
+
+(1,0)
+
+(2,1)
+</pre>
+<p><a href="java-basic-exercise-194.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>195.</strong> Write a Java program to check if three given side lengths (integers) can make a triangle or not. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input side1:  5
+Input side2:  6
+Input side3:  8
+Is the said sides form a triangle: true 
+</pre>
+<p><a href="java-basic-exercise-195.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>196.</strong> rite a Java program to create a spiral array of n * n sizes from a given integer n. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+ Input a number:  5
+Spiral array becomes:
+1 2 3 4 5
+16 17 18 19 6
+15 24 25 20 7
+14 23 22 21 8
+13 12 11 10 9
+</pre>
+<p><a href="java-basic-exercise-196.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>197.</strong> Write a Java program to test if a given number (positive integer) is a perfect square or not. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input a positive integer:  6
+Is the said number perfect square? false 
+</pre>
+<p><a href="java-basic-exercise-197.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>198.</strong> Write a Java program to calculate the position of a given prime number. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input a positive integer:  15
+Position of the said Prime number: 6
+</pre>
+<p><a href="java-basic-exercise-198.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>199.</strong> Write a Java program to check if a string follows a given pattern. </p>
+<p>Example pattern:<br>
+Given pattern = "xyyx", str = "red black black red", return true.<br>
+Given pattern = "xyyx", str = "red black black green", return false.<br>
+Given pattern = "xxxx", str = "red black black red", return false.<br>
+Given pattern = "xxxx", str = "red red red red", return true.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Is the string and pattern matched? false
+</pre>
+<p><a href="java-basic-exercise-199.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>200.</strong> Write a Java program to remove duplicate letters and arrange them in lexicographical order from a given string containing only lowercase letters. </p>
+<p>Note: In mathematics, the lexicographic or lexicographical order (also known as lexical order, dictionary order, alphabetical order or lexicographic(al) product) is a generalization of the way words are alphabetically ordered based on the alphabetical order of their component letters.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original string: zxywooxz
+After removing duplicate characters: xywoz
+</pre>
+<p><a href="java-basic-exercise-200.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>201.</strong> Write a Java program to divide a given array of integers into given k non-empty subsets whose sums are all equal. Return true if all sums are equal otherwise return false. </p>
+<p>Example:<br>
+nums = {1,3,3,5,6,6}, k = 4;<br>
+4 subsets (5,1), (3, 3), (6), (6) with equal sums.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original Array: [1, 3, 3, 5, 6, 6]
+Target of subsets: 4
+After removing duplicate characters: true
+</pre>
+<p><a href="java-basic-exercise-201.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>202.</strong> Write a Java program to find the total number of continuous subarrays in a given array of integers whose sum equals an integer. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original Array: [4, 2, 3, 3, 7, 2, 4]
+Value of k: 6
+Total number of continuous subarrays: 3
+</pre>
+<p><a href="java-basic-exercise-202.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>203.</strong> Write a Java program to find the contiguous subarray of given length k which has the maximum average value of a given array of integers. Display the maximum average value. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Original Array: [4, 2, 3, 3, 7, 2, 4]
+Value of k: 3
+Maximum average value: 4.333333333333333
+</pre>
+<p><a href="java-basic-exercise-203.php" target="_blank">Click me to see the solution</a></p>
+
+<p><strong>204.</strong> Write a Java program to compute xn % y where x, y and n are all 32-bit integers. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input x :  25
+Input n :  35
+Input y :  45
+x^n % y = 5.0</pre>
+<p><a href="java-basic-exercise-204.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>205.</strong> Write a Java program to check whether an integer is a power of 2 or not using O(1) time. </p>
+<p>Note: O(1) means that it takes a constant time, like 12 nanoseconds, or two minutes no matter the amount of data in the set.<br>
+O(n) means it takes an amount of time linear with the size of the set, so a set twice the size will take twice the time. You probably don't want to put a million objects into one of these.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input a number :  25
+false</pre>
+<p><a href="java-basic-exercise-205.php" target="_blank">Click me to see the solution</a></p>
+
+<p><strong>206.</strong> From Wikipedia,<br>
+A cyclic redundancy check (CRC) is an error-detecting code commonly used in digital networks and storage devices to detect accidental changes to raw data. Blocks of data entering these systems get a short check value attached, based on the remainder of a polynomial division of their contents. On retrieval, the calculation is repeated and, in the event the check values do not match, corrective action can be taken against data corruption. CRCs can be used for error correction.<br>
+<p>Example:</p>
+Write a Java program to generate a CRC32 checksum of a given string or byte array. </p>
+<p><strong>Input:</strong><br>
+<pre>
+Input a string:  The quick brown fox
+crc32 checksum of the string: b74574de
+</pre>
+<p><a href="java-basic-exercise-206.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>207.</strong> Write a Java program to merge two sorted (ascending) linked lists in ascending order. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+How many elements do you want to add in 1st linked list?:  3
+Input numbers of 1st linked list in ascending order:  1 2 3
+
+How many elements do you want to add in 2nd linked list?:  3
+Input numbers of 2nd linked list in ascending order:  4 5 6
+
+Merged list: 1 2 3 4 5 6 </pre>
+<p><a href="java-basic-exercise-207.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>208.</strong> Write a Java program to create a basic string compression method using repeated character counts. </p>
+<p>Input string: aaaabbbbcccccddddeeee</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Enter a string (you can include space as well)
+ aaaabbbbcccccddddeeee
+The compressed string along with the counts of repeated characters is:
+a4b4c5d4e4</pre>
+<p><a href="java-basic-exercise-208.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>209.</strong> Write a Java program to find all unique combinations from a collection of candidate numbers. The sum of the numbers will equal a given target number. </p>
+<p>Input number of elements of the array: <br>
+3<br>
+Input number format: 2 3 4 5: </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Enter elements:
+ 6 7 8
+Enter target sum:
+ 21
+A solution set is:
+{ 6 7 8 }
+</pre>
+<p><a href="java-basic-exercise-209.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>210.</strong> Write a Java program to match any single character (use ?) or any sequence of characters (use *) including empty. The matching should cover the entire input string. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Enter a string
+ bb
+Enter a pattern
+ b*
+Yes
+</pre>
+<p><a href="java-basic-exercise-210.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>211.</strong> Write a Java program to find the heights of the top three buildings in descending order from eight given buildings. </p>
+<p><strong>Input:</strong></p>
+<p>0 ≤ height of building (integer) ≤ 10,000</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input the heights of eight buildings:
+ 25 19 23 45 18 23 24 19
+
+Heights of the top three buildings:
+45
+25
+24
+</pre>
+<p><a href="java-basic-exercise-211.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>212.</strong> Write a Java program to compute the digit number of the sum of two given integers. </p>
+<p><strong>Input:</strong></p>
+<p>Each test case consists of two non-negative integers a and b which are separated by a space in a line.
+0 ≤ a, b ≤ 1,000,000</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input two integers(a b):
+ 13 25
+Digit number of sum of said two integers:
+2
+</pre>
+<p><a href="java-basic-exercise-212.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>213.</strong> Write a Java program to check whether three given lengths (integers) of three sides form a right triangle. Print "Yes" if the given sides form a right triangle otherwise print "No". </p>
+<p><strong>Input:</strong></p>
+<p>Each test case consists of two non-negative integers a and b which are separated by a space in a line.
+0 ≤ a, b ≤ 1,000,000</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input three integers(sides of a triangle)
+ 6 9 12
+If the given sides form a right triangle?
+No
+</pre>
+<p><a href="java-basic-exercise-213.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>214.</strong> Write a Java program which solve the equation: <br>
+ax+by=c<br>
+dx+ey=f<br>
+Print the values of x, y where a, b, c, d, e and f are given. </p>
+<p><strong>Input:</strong></p>
+<p> a,b,c,d,e,f separated by a single space.<br>
+(-1,000 ≤ a,b,c,d,e,f ≤ 1,000)</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input the value of a, b, c, d, e, f:
+ 5 6 8 9 7 4
+-1.684 2.737
+</pre>
+<p><a href="java-basic-exercise-214.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>215.</strong> Write a Java program to compute the debt amount in n months. Monthly, the loan adds 4% interest to the $100,000 borrowed and rounds it to the nearest 1,000. </p>
+<p><strong>Input:</strong></p>
+<p>An integer n (0 ≤ n ≤ 100) </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input number of months:
+ 6
+
+Amount of debt: 
+129000
+</pre>
+<p><a href="java-basic-exercise-215.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>216.</strong> Write a Java program which reads an integer n and finds the number of combinations of a,b,c and d (0 ≤ a,b,c,d ≤ 9) where (a + b + c + d) equals n. </p>
+<p><strong>Input:</strong></p>
+<p> a,b,c,d,e,f separated by a single space.<br>
+(-1,000 ≤ a,b,c,d,e,f ≤ 1,000)</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input the number(n):
+ 5 
+Number of combinations of a, b, c and d :
+56
+</pre>
+<p><a href="java-basic-exercise-216.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>217.</strong> Write a Java program to print the number of prime numbers less than or equal to a given integer. </p>
+<p><strong>Input:</strong></p>
+<p> n (1 ≤ n ≤ 999,999)</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input the number(n):
+ 1235
+Number of prime numbers which are less than or equal to n.:
+202
+</pre>
+<p><a href="java-basic-exercise-217.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>218.</strong> Write a Java program to compute the radius and central coordinates (x, y) of a circle constructed from three given points on the plane surface. </p>
+<p><strong>Input:</strong></p>
+<p>x1, y1, x2, y2, x3, y3 separated by a single space.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input x1, y1, x2, y2, x3, y3 separated by a single space:
+ 5 6 4 8 7 9
+
+Radius and the central coordinate:
+1.821 (5.786 7.643)                     
+</pre>
+<p><a href="java-basic-exercise-218.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>219.</strong> Write a Java program to check if a point (x, y) is in a triangle or not. A triangle is formed by three points. </p>
+<p><strong>Input:</strong></p>
+<p>x1, y1, x2, y2, x3, y3 separated by a single space.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input (x1, y1)
+2
+6
+Input (x2, y2)
+3
+5
+Input (x3, y3)
+4
+6
+Input (xp, yp)
+5
+6
+The point is outside the triangle.                    
+</pre>
+<p><a href="java-basic-exercise-219.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>220.</strong> Write a Java program to compute and print the sum of two given integers (more than or equal to zero). If the given integers or the sum have more than 80 digits, print "overflow". </p>
+<p><strong>Input:</strong></p>
+<p></p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input two integers:
+25
+46
+
+Sum of the said two integers:
+71                   
+</pre>
+<p><a href="java-basic-exercise-220.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>221.</strong> Write a Java program that accepts six numbers as input and sorts them in descending order. </p>
+<p><strong>Input:</strong></p>
+<p>Input consists of six numbers n1, n2, n3, n4, n5, n6 (-100000 ≤ n1, n2, n3, n4, n5, n6 ≤ 100000). The six numbers are separated by a space.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+  Input six integers:
+ 4 6 8 2 7 9
+After sorting the said integers:
+9 8 7 6 4 2                   
+</pre>
+<p><a href="java-basic-exercise-221.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>222.</strong> Write a Java program to test whether two lines PQ and RS are parallel. The four points are P(x1, y1), Q(x2, y2), R(x3, y3), and S(x4, y4). </p>
+<p><strong>Input:</strong></p>
+<p>−100 ≤ x1, y1, x2, y2, x3, y3, x4, y4 ≤ 100<br>
+Each value is a real number with at most 5 digits after the decimal point.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input P(x1,y1),separated by a space.
+ 5 6
+Input Q(x2,y2),separated by a space.
+ 4 2
+Input R(x3,y3),separated by a space.
+ 5 3
+Input S(x4,y4),separated by a space.
+ 5 6
+Two lines are not parallel.             
+</pre>
+<p><a href="java-basic-exercise-222.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>223.</strong> Write a Java program to find the maximum sum of a contiguous subsequence from a given sequence of numbers a1, a2, a3, ... an. A subsequence of one element is also a continuous subsequence. </p>
+<p><strong>Input:</strong></p>
+<p>You can assume that 1 ≤ n ≤ 5000 and -100000 ≤ ai ≤ 100000.<br>
+Input numbers are separated by a space.<br>
+Input 0 to exit.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+How many integers would you like to input?
+ 5
+Input the integers:
+ 25 61 35 42 66
+Maximum sum of the said contiguous subsequence:
+229             
+</pre>
+<p><a href="java-basic-exercise-223.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>224.</strong> There are two circles C1 with radius r1, central coordinate (x1, y1) and C2 with radius r2 and central coordinate (x2, y2). <br>
+Write a Java program to test the followings -<br>
+"C2 is in C1" if C2 is in C1<br>
+"C1 is in C2" if C1 is in C2<br>
+"Circumference of C1 and C2 intersect" if circumference of C1 and C2 intersect, and<br>
+"C1 and C2 do not overlap" if C1 and C2 do not overlap.</p>
+<p><strong>Input:</strong></p>
+<p>Input numbers (real numbers) are separated by a space.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input x1, y1, r1: (numbers are separated by a space)
+ 5 6 8 7
+Input x2, y2, r2: (numbers are separated by a space)
+ 8 9 5 4
+C1 and C2  do not overlap      
+</pre>
+<p><a href="java-basic-exercise-224.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>225.</strong> Write a Java program that reads a date (from 2004/1/1 to 2004/12/31) and prints the day of the date. Jan. 1, 2004, was Thursday. Note that 2004 is a leap year. </p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input the month(1-12)
+ 9
+Input date (1-31)
+ 15
+Name of the date: 
+Wednesday
+</pre>
+<p><a href="java-basic-exercise-225.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>226.</strong> Write a Java program to print mode values from a given sequence of integers. The mode value is the element that occurs most frequently. If there are several mode values, print them in ascending order. </p>
+<p><strong>Input:</strong></p>
+<p>A sequence of integer’s ai (1 ≤ ai ≤ 100). The number of integers is less than or equals to 100.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+How many integers would you like to input(Max.100?)
+5
+Input the integers:
+25
+35
+15
+5
+45
+Mode value(s)in ascending order:
+5
+15
+25
+35
+45
+</pre>
+<p><a href="java-basic-exercise-226.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>227.</strong> Write a Java program that reads a text (only alphabetical characters and spaces) and prints two words. The first one is the word which is frequently used in the text. The second one is the word with the most letters. <br>
+Note: A word is a sequence of letters which is separated by the spaces.</p>
+<p><strong>Input:</strong></p>
+<p>A sequence of integer’s ai (1 ≤ ai ≤ 100). The number of integers is less than or equals to 100.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Thank you for your comment and your participation.
+Input a text in a line:
+Most frequent text and the word which has the maximum number of letters:
+your participation.
+</pre>
+<p><a href="java-basic-exercise-227.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>228.</strong> Write a Java program that reads n digits (given) chosen from 0 to 9 and prints the number of combinations where the sum of the digits equals another given number (s). Do not use the same digits in a combination. <br>
+For example, the combinations where n = 3 and s = 6 are as follows:<br>
+1 + 2 + 3 = 6<br>
+0 + 1 + 5 = 6<br>
+0 + 2 + 4 = 6</p>
+<p><strong>Input:</strong></p>
+<p>Two integers as number of combinations and their sum by a single space in a line. Input 0 0 to exit.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input number of combinations and sum (separated by a space in a line):
+3 6
+Number of combinations:
+3
+</pre>
+<p><a href="java-basic-exercise-228.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>229.</strong> Write a Java program that reads the two adjoining sides and the diagonal of a parallelogram. It will check whether the parallelogram is a rectangle or a rhombus. <br>
+According to Wikipedia-<br>
+parallelograms: In Euclidean geometry, a parallelogram is a simple (non-self-intersecting) quadrilateral with two pairs of parallel sides. The opposite or facing sides of a parallelogram are of equal length and the opposite angles of a parallelogram are of equal measure.<br>
+rectangles: In Euclidean plane geometry, a rectangle is a quadrilateral with four right angles. It can also be defined as an equiangular quadrilateral, since equiangular means that all of its angles are equal (360°/4 = 90°). It can also be defined as a parallelogram containing a right angle.<br>
+rhombus: In plane Euclidean geometry, a rhombus (plural rhombi or rhombuses) is a simple (non-self-intersecting) quadrilateral whose four sides all have the same length. Another name is equilateral quadrilateral, since equilateral means that all of its sides are equal in length. The rhombus is often called a diamond, after the diamonds suit in playing cards which resembles the projection of an octahedral diamond, or a lozenge, though the former sometimes refers specifically to a rhombus with a 60° angle (see Polyiamond), and the latter sometimes refers specifically to a rhombus with a 45° angle.</p>
+<p><strong>Input:</strong></p>
+<p>Two adjoined sides and the diagonal.<br>
+1 ≤ ai, bi, ci ≤ 1000, ai + bi > ci</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input two adjoined sides and the diagonal of a parallelogram (comma separated):
+8,8,8
+This is a rhombus.
+</pre>
+<p><a href="java-basic-exercise-229.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>230.</strong> Write a Java program to replace a string "python" with "java" and "java" with "python" in a given string.
+</p>
+<p><strong>Input:</strong></p>
+<p>English letters (including single byte alphanumeric characters, blanks, symbols) are given on one line. The length of the input character string is 1000 or less.<br>
+<strong>Output: </strong><br>
+Exchanged character string of python and java on one line.</p>
+<p><em>Expected Output:</em></p>
+<pre>
+Input the string:
+python is more propular than java
+New string:
+java is more propular than python
+</pre>
+<p><a href="java-basic-exercise-230.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>231.</strong> Write a Java program to find the difference between the largest integer and the smallest integer. These integers are created by 8 numbers from 0 to 9. The number that can be rearranged starts with 0 as in 00135668.
+</p>
+<p><strong>Input:</strong></p>
+<p>Data is a sequence of 8 numbers (numbers from 0 to 9).<br>
+<strong>Output:</strong><br>
+The difference between the largest integer and the smallest integer.</p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input an integer created by 8 numbers from 0 to 9:
+567894321
+Difference between the largest and the smallest integer from the given integer:
+75308643
+</pre>
+<p><a href="java-basic-exercise-231.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>232.</strong> Write a Java program to compute the sum of the first n prime numbers. </p>
+<p><strong>Input:</strong></p>
+<p>n ( n ≤ 10000). Input 0 to exit the program.</p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input a number (n<=10000) to compute the sum:
+100
+Sum of first 100 prime numbers:
+24133
+</pre>
+<p><a href="java-basic-exercise-232.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>233.</strong> Write a Java program that accepts an even number (n should be greater than or equal to 4 and less than or equal to 50,000, a Goldbach number) from the user and creates combinations that express the given number as a sum of two prime numbers. Print the number of combinations. </p>
+<p>Goldbach number: A Goldbach number is a positive even integer that can be expressed as the sum of two odd primes.[4] Since four is the only even number greater than two that requires the even prime 2 in order to be written as the sum of two primes, another form of the statement of Goldbach's conjecture is that all even integers greater than 4 are Goldbach numbers.<br>
+The expression of a given even number as a sum of two primes is called a Goldbach partition of that number. The following are examples of Goldbach partitions for some even numbers:<br>
+6 = 3 + 3<br>
+8 = 3 + 5<br>
+10 = 3 + 7 = 5 + 5<br>
+12 = 7 + 5<br>
+...<br>
+100 = 3 + 97 = 11 + 89 = 17 + 83 = 29 + 71 = 41 + 59 = 47 + 53</p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input an even number: 100
+
+Number of combinations: 6
+</pre>
+<p><a href="java-basic-exercise-233.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>234.</strong> If you draw a straight line on a plane, the plane is divided into two regions. For example, if you draw two straight lines in parallel, you get three areas. If you draw vertically from one to the other you get 4 areas. </p>
+<p>Write a Java program to create the maximum number of regions obtained by drawing n given straight lines.<br>
+<strong>Input:</strong><br>
+xp,yp, xq, yq, xr, yr, xs and ys are -100 to 100 respectively and each value can be up to 5 digits after the decimal point It is given as a real number including the number of.<br>
+<strong>Output: Yes or No.</strong> </p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input number of straight lines:
+5
+Number of regions:
+16
+</pre>
+<p><a href="java-basic-exercise-234.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>235.</strong> There are four different points on a plane: P(xp, yp), Q(xq, yq), R(xr, yr) and S(xs, ys). Write a Java program to test whether AB and CD are orthogonal or not. </p>
+<strong>Input:</strong><br>
+xp,yp, xq, yq, xr, yr, xs and ys are -100 to 100 respectively and each value can be up to 5 digits after the decimal point It is given as a real number including the number of.<br>
+<strong>Output: Yes or No.</strong> </p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input xp, yp, xq, yq, xr, yr, xs, ys:
+3.5 4.5 2.5 -1.5 3.5 1.0 0.0 4.5
+Two lines are not orthogonal.
+</pre>
+<p><a href="java-basic-exercise-235.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>236.</strong> Write a Java program to sum all numerical values (positive integers) embedded in a sentence. </p>
+<p>
+<strong>Input:</strong><br>
+Sentences with positive integers are given over multiple lines. Each line is a character string containing one-byte alphanumeric characters, symbols, spaces, or an empty line. However the input is 80 characters or less per line and the sum is 10,000 or less.</p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input some text and numeric values:
+5 apple and 10 orange are rotten in the basket
+
+Sum of the numeric values:
+15
+</pre>
+<p><a href="java-basic-exercise-236.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>237.</strong> There are 10 vertical and horizontal squares on a plane. Each square is painted in blue and green. Blue represents the sea, and green represents the land. When two green squares are in contact with the top and bottom, or right and left, they are ground. The area created by only one green square is called an "island". For example, the figure below shows five islands. <br>
+Write a Java program to read the mass data and find the number of islands. . </p>
+<p><strong>Input:</strong><br>
+A single data set is represented by 10 rows of 10 numbers representing green squares as 1 and blue squares as zeros.<br>
+<strong>Output:</strong> For each data set, output the number of islands.</p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input 10 rows of 10 numbers representing green squares (island) as 1 and blue squares (sea) as zeros
+1100000111
+1000000111
+0000000111
+0010001000
+0000011100
+0000111110
+0001111111
+1000111110
+1100011100
+1110001000
+Number of islands:
+5
+</pre>
+<p><a href="java-basic-exercise-237.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>238.</strong> When characters are consecutive in a string, it is possible to shorten it by replacing them with a certain rule. For example, the character string YYYYY, if it is expressed as # 5 Y, it is compressed by one character. <br>
+Write a Java program to restore the original string by entering the compressed string with this rule. However, the # character does not appear in the restored character string.
+<br>
+Note: The original sentences are uppercase letters, lowercase letters, numbers, symbols, less than 100 letters, and consecutive letters are not more than 9 letters.</p>
+<p><strong>Input:</strong><br>
+Multiple character strings are given. One string is given per line. <br>
+<strong>Output:</strong> The restored character string for each character on one line.</p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input the text:
+XY#6Z1#4023
+XYZZZZZZ1000023
+</pre>
+<p><a href="java-basic-exercise-238.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>239.</strong> A search engine giant such as Google accepts thousands of web pages from around the world and categorizes them, creating a huge database of information. Search engines also analyze search keywords entered by the user and create database queries based on those keywords. In both cases, complicated processing is carried out to realize efficient retrieval, but the basics are all about cutting out words from sentences. <br>
+Write a Java program to cut out words of 3 to 6 characters length from a given sentence not more than 1024 characters. </p>
+<p><strong>Input:</strong><br>
+English sentences consisting of delimiters and alphanumeric characters are given on one line. <br>
+<strong>Output:</strong> Output a word delimited by one space character on one line.</p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input a sentence (1024 characters. max.)
+The quick brown fox
+
+3 to 6 characters length of words:
+The quick brown fox
+</pre>
+<p><a href="java-basic-exercise-239.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>240.</strong> As shown in Figure 1, arrange integers (0 to 99) as narrow hilltops. When reading such data from top to bottom, following the next rule represents a huge amount of data.<br>
+Write a Java program that computes the maximum value of the sum of the passing integers. </p>
+<p><strong>Input:</strong><br>
+A series of integers separated by commas are given in diamonds. No spaces are included in each line. The input example corresponds to Figure 1. The number of lines of data is less than 100 lines. <br>
+<strong>Output:</strong> The maximum value of the sum of integers passing according to the rule on one line.</p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input the numbers (ctrl+c to exit):
+8
+4,9
+9,2,1
+3,8,5,5
+5,6,3,7,6
+3,8,5,5
+9,2,1
+4,9
+8
+Maximum value of the sum of integers passing according to the rule on one line.
+64
+</pre>
+<p><a href="java-basic-exercise-240.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>241.</strong> Write a Java program to find the number of combinations that satisfy p + q + r + s = n where n is a given number <= 4000 and p, q, r, s range from 0 to 1000. </p>
+<p><em>Sample Output:</em></p>
+<pre>
+Input a positive integer:
+252
+Number of combinations of a,b,c,d:
+2731135
+</pre>
+<p><a href="java-basic-exercise-241.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>242.</strong> Your task is to develop a small piece of spreadsheet software. Write a Java program that adds up the columns and rows of a given table as shown in the specified figure: </p>
+<pre>Input number of rows/columns (0 to exit)
+4
+25 69 51 26
+68 35 29 54
+54 57 45 63
+61 68 47 59
+Result:
+   25   69   51   26  171
+   68   35   29   54  186
+   54   57   45   63  219
+   61   68   47   59  235
+  208  229  172  202  811</pre>
+<p><a href="java-basic-exercise-242.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>243.</strong> Write a Java program that reads a list of pairs of a word and a page number. It prints the words and a list of page numbers. </p>
+<p><strong>Input:</strong><br>
+<pre>Input pairs of a word and a page number:
+apple 5
+banana 6
+
+Word and page number in alphabetical order:
+apple
+5
+banana
+6</pre>
+<p><a href="java-basic-exercise-243.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>244.</strong> Write a Java program that accepts a string from the user and checks whether it is correct or not. </p>
+<p>The conditions for getting the "correct answer" are:<br>
+a) There must be only three characters X, Y, and Z in the string, and no other characters.<br>
+b) Any string of any form such as aXYZa can get the "correct answer", where a is either an empty string or a string consisting only of the letter X;<br>
+c) If aXbZc is true, aXbYZca is also valid, where a, b, c are either empty strings or a string consisting only of the letter X.</p>
+<p><strong>Input:</strong><br>
+<pre>
+Input a string:
+ XYZ
+Correct format..
+</pre>
+<p><a href="java-basic-exercise-244.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>245.</strong> Write a Java program that accepts students' names, ids, and marks and displays their highest and lowest scores. </p>
+<p>The student name and id are all strings of no more than 10 characters. The score is an integer between 0 and 100.</p>
+<p><strong>Input:</strong><br>
+<pre>
+Input number of students:
+3
+Input Student Name, ID, Score:
+Devid v1 72
+Peter v2 68
+Johnson v3 85
+name, ID of the highest score and the lowest score:
+Johnson v3
+Peter v2
+</pre>
+<p><a href="java-basic-exercise-245.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>246.</strong> Let us use the letter H to mean "hundred", the letter T to mean "ten" and “1, 2, . . . n” to represent the one digit n (&lt;10). Using the given format, write a Java program that converts 3 digits positive numbers. For example, 234 should be output as BBSSS1234 because it has 2 "hundreds", 3 "ten", and 4 ones. </p>
+<p>The student name and id are all strings of no more than 10 characters. The score is an integer between 0 and 100.</p>
+<p><strong>Input:</strong><br>
+235<br>
+230<br>
+Output:<br>
+HHTTT12345<br>
+HHTTT</p>
+<pre>
+Input a positive number(max three digits):
+235
+Result:
+HHTTT12345
+</pre>
+<p><a href="java-basic-exercise-246.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>247.</strong> Write a Java program that accepts three integers and checks whether the sum of the first two integers is greater than the third integer. Three integers are in the interval [-2<sup>31</sup>, 2<sup>31</sup> ]. </p>
+<p><strong>Input:</strong><br>
+<pre>
+Input three integers (a,b,c):
+5 8 9
+Check whether (a + b) is greater than c?
+true
+</pre>
+<p><a href="java-basic-exercise-247.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>248.</strong> From Wikipedia, An abecedarium (or abecedary) is an inscription consisting of the letters of an alphabet, almost always listed in order. Typically, abecedaria (or abecedaries) are practice exercises.<br>
+Write a Java program to check if each letter of a given word (Abecadrian word) is less than the one before it. </p>
+<p><strong>Input:</strong><br>
+<pre>
+Input a word:  ABCD
+Is Abecadrian word? true
+</pre>
+<p><a href="java-basic-exercise-248.php" target="_blank">Click me to see the solution</a></p>
+<p><strong>249.</strong> From Wikipedia,<br>
+The Hamming weight of a string is the number of symbols that are different from the zero-symbol of the alphabet used. It is thus equivalent to the Hamming distance from the all-zero string of the same length. For the most typical case, a string of bits, this is the number of 1's in the string, or the digit sum of the binary representation of a given number and the ℓ<sub>₁</sub> norm of a bit vector. In this binary case, it is also called the population count, popcount, sideways sum, or bit summation.<br>
+<p>Example:</p>
+<div class="table-responsive">
+<table class="table table-bordered">
+<tr>
+<th>String</th>
+<th>Hamming weight</th>
+</tr>
+<tr>
+<td>11101</td>
+<td>4</td>
+</tr>
+<tr>
+<td>11101000</td>
+<td>4</td>
+</tr>
+<tr>
+<td>00000000</td>
+<td>0</td>
+</tr>
+<tr>
+<td>789012340567</td>
+<td>10</td>
+</tr>
+</table></div>
+Write a Java program to count the number of set bits in a 32-bit integer. </p>
+<p><strong>Input:</strong><br>
+<pre>
+Input a number:  1427
+6
+</pre>
+<p><a href="java-basic-exercise-249.php" target="_blank">Click me to see the solution</a></p>
+
+<p id="editorr"><strong>Java Code Editor:</strong></p>
+<p>
+<iframe src="https://trinket.io/embed/java/b021d3a641" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></p>
+<p class="style2"><strong>More to Come !</strong></p>
+<p style="color:#ff0000;"><strong>Do not submit any solution of the above exercises at here, if you want to contribute go to the appropriate exercise page.</strong></p>
+</article>
+﻿<style type="text/css">
+
+.a_link a:link{
+
+color: #bc17d6;
+
+font-weight: bold;
+
+font-size: 16px;
+
+margin-left: 1%
+
+}
+
+.a_link a:hover{
+
+color: #4e990d;
+
+font-weight: bold;
+
+font-size: 16px;
+
+margin-left: 1%
+
+}
+
+.a_link a:active{
+
+color: #0c1796;
+
+font-weight: bold;
+
+font-size: 16px;
+
+margin-left: 1%
+
+}
+
+.a_link a:visited{
+
+color: #032859;
+
+font-weight: bold;
+
+font-size: 16px;
+
+margin-left: 1%
+
+}
+
+.native-cpc a {
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+
+  Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+
+
+.default-ad {
+
+  display: none;
+
+}
+
+
+
+.native-cpc a {
+
+  text-decoration: none !important;
+
+}
+
+
+
+.native-cpc img {
+
+  display: none;
+
+}
+
+
+
+.native-cpc ._default_ {
+
+  display: flex;
+
+  flex-flow: column wrap;
+
+  max-width: 600px;
+
+  padding: 10px;
+
+  background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+
+
+
+}
+
+
+
+.native-cpc .default-title {
+
+  margin-right: 5px;
+
+  font-size: 10px;
+
+  margin-bottom: 2px;
+
+  letter-spacing: .75px;
+
+  text-transform: uppercase;
+
+}
+
+
+
+.native-cpc .default-title:before {
+
+  content: "Sponsored by "
+
+}
+
+
+
+.native-cpc .default-description {
+
+  font-size: 14px;
+
+  line-height: 1.4;
+
+}
+.widget {display: none !important;}
+p.bottom_social_share{
+margin-left:0;
+font-weight: bold;
+font-size: 17px;
+}
+span.bottom_social_share{
+margin-left: 50px;
+margin-right: 50px;
+}
+
+
+
+.comments-block {
+    text-align: center;
+}
+
+
+
+
+
+
+</style>
+
+
+<div class="mdl-cell mdl-cell--12-col">
+<p class="bottom_social_share">Follow us on <span><a href="https://www.facebook.com/W3resource-103553425799800" target="_blank">Facebook</a></span>
+and <span><a href="https://twitter.com/w3resource" target="_blank">Twitter</a></span> for latest update.</p>
+</div>
+
+<div class="mdl-grid" style="margin-bottom: 50px">
+
+<div id="bottom_ad_zero_google" class="mdl-cell mdl-cell--12-col mdl-cell--hide-phone">
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-2153208817642134" data-ad-slot="4616214717"></ins>
+<script>
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+</script>
+</div>
+</div>
+
+
+<style type="text/css">
+.tips h2 {font-size: 22px; font-weight: bold; border-bottom: 1px solid #000;}
+.tips {margin: -20px 10px 10px 10px}
+</style>
+
+<hr class="w3r_hr">
+<ul class="w3r_list" style="list-style: none; font-size: 17px;margin-block-start: 0.83em; margin-block-end: 0.83em;">
+<li><strong>Weekly Trends and Language Statistics</strong></li>
+<li><a href="https://www.w3resource.com/weekly-trends-and-language-statistics.php" target="_blank">Weekly Trends and Language Statistics</a></li>
+
+</ul>
+<hr class="w3r_hr">
+<div id="bottom_ad_zero_google" class="mdl-cell mdl-cell--12-col">
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2153208817642134" data-ad-slot="1905003914" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="mdl-cell mdl-cell--12-col">
+</div>
+<div class="mdl-cell mdl-cell--12-col" id="below_content_mobile_13062023">
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2153208817642134" data-ad-slot="7187948933" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<hr class="w3r_hr">
+
+<div class="comments-block">
+<button id="show-comments" onclick="disqus();return false;">Load Disqus Comments</button>
+</div>
+<div id="disqus_thread" itemscope itemtype="https://schema.org/Comment" style="margin-top:0"></div>
+<script>
+var disqus_loaded = false;
+var disqus_shortname = 'w3r'; //Add your shortname here
+
+function disqus() {
+
+    if (!disqus_loaded)  {
+        disqus_loaded = true;
+
+        var e = document.createElement("script");
+        e.type = "text/javascript";
+        e.async = true;
+        e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0])
+        .appendChild(e);
+
+        //Hide the button after opening
+        document.getElementById("show-comments").style.display = "none";
+    }
+}
+
+//Opens comments when linked to directly
+var hash = window.location.hash.substr(1);
+if (hash.length > 8) {
+    if (hash.substring(0, 8) == "comment-") {
+        disqus();
+    }
+}
+
+//Remove this if you don't want to load comments for search engines
+if(/bot|google|baidu|bing|msn|duckduckgo|slurp|yandex/i.test(navigator.userAgent)) {
+   disqus();
+}
+</script>
+<hr class="w3r_hr">
+
+
+
+</div>
+<div class="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--3-col mdl-cell--hide-phone" id="sidebar_right">
+<div id="sol_ad_zero" style="margin-bottom: 20px">
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2153208817642134" data-ad-slot="1236474527" data-ad-format="auto"></ins>
+<script>
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+</script>
+</div>
+
+
+<div id="sol_ad_two" style="width:300px;height:600px;margin-bottom: 20px">
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2153208817642134" data-ad-slot="6376961513"></ins>
+<script>
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+</script>
+
+<style>
+	@media only screen and (min-width: 0px) and (min-height: 0px) {
+		div[id^="bsa-zone_1634824904979-6_123456"] {
+			min-width: 300px;
+			min-height: 250px;
+		}
+	}
+	@media only screen and (min-width: 640px) and (min-height: 0px) {
+		div[id^="bsa-zone_1634824904979-6_123456"] {
+			min-width: 300px;
+			min-height: 250px;
+		}
+	}
+</style>
+<div id="bsa-zone_1634824904979-6_123456"></div>
+</div>
+<div id="sol_ad_three" style="margin-bottom: 20px">
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2153208817642134" data-ad-slot="6965701915"></ins>
+<script>
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<footer class="mdl-mega-footer">
+
+<div class="mdl-mega-footer__bottom-section">
+<div class="mdl-logo"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">This work is licensed under a Creative Commons Attribution 4.0 International License.</a></div>
+</div>
+<div class="mdl-mega-footer__bottom-section">
+<div class="mdl-logo">©w3resource.com 2011-2024</div>
+<ul class="mdl-mega-footer__link-list">
+<li><a href="https://www.w3resource.com/privacy.php">Privacy</a></li>
+<li><a href="https://www.w3resource.com/about.php">About</a></li>
+<li><a href="https://www.w3resource.com/contact.php">Contact</a></li>
+<li><a href="https://www.w3resource.com/feedback.php">Feedback</a></li>
+<li><a href="https://www.w3resource.com/advertise.php">Advertise</a></li>
+</ul>
+</div>
+</footer>
+</main>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script>
+/**
+ * material-design-lite - Material Design Components in CSS, JS and HTML
+ * @version v1.3.0
+ * @license Apache-2.0
+ * @copyright 2015 Google, Inc.
+ * @link https://github.com/google/material-design-lite
+ */
+!function(){"use strict";function e(e,t){if(e){if(t.element_.classList.contains(t.CssClasses_.MDL_JS_RIPPLE_EFFECT)){var s=document.createElement("span");s.classList.add(t.CssClasses_.MDL_RIPPLE_CONTAINER),s.classList.add(t.CssClasses_.MDL_JS_RIPPLE_EFFECT);var i=document.createElement("span");i.classList.add(t.CssClasses_.MDL_RIPPLE),s.appendChild(i),e.appendChild(s)}e.addEventListener("click",function(s){if("#"===e.getAttribute("href").charAt(0)){s.preventDefault();var i=e.href.split("#")[1],n=t.element_.querySelector("#"+i);t.resetTabState_(),t.resetPanelState_(),e.classList.add(t.CssClasses_.ACTIVE_CLASS),n.classList.add(t.CssClasses_.ACTIVE_CLASS)}})}}function t(e,t,s,i){function n(){var n=e.href.split("#")[1],a=i.content_.querySelector("#"+n);i.resetTabState_(t),i.resetPanelState_(s),e.classList.add(i.CssClasses_.IS_ACTIVE),a.classList.add(i.CssClasses_.IS_ACTIVE)}if(i.tabBar_.classList.contains(i.CssClasses_.JS_RIPPLE_EFFECT)){var a=document.createElement("span");a.classList.add(i.CssClasses_.RIPPLE_CONTAINER),a.classList.add(i.CssClasses_.JS_RIPPLE_EFFECT);var l=document.createElement("span");l.classList.add(i.CssClasses_.RIPPLE),a.appendChild(l),e.appendChild(a)}i.tabBar_.classList.contains(i.CssClasses_.TAB_MANUAL_SWITCH)||e.addEventListener("click",function(t){"#"===e.getAttribute("href").charAt(0)&&(t.preventDefault(),n())}),e.show=n}var s={upgradeDom:function(e,t){},upgradeElement:function(e,t){},upgradeElements:function(e){},upgradeAllRegistered:function(){},registerUpgradedCallback:function(e,t){},register:function(e){},downgradeElements:function(e){}};s=function(){function e(e,t){for(var s=0;s<c.length;s++)if(c[s].className===e)return"undefined"!=typeof t&&(c[s]=t),c[s];return!1}function t(e){var t=e.getAttribute("data-upgraded");return null===t?[""]:t.split(",")}function s(e,s){var i=t(e);return i.indexOf(s)!==-1}function i(e,t,s){if("CustomEvent"in window&&"function"==typeof window.CustomEvent)return new CustomEvent(e,{bubbles:t,cancelable:s});var i=document.createEvent("Events");return i.initEvent(e,t,s),i}function n(t,s){if("undefined"==typeof t&&"undefined"==typeof s)for(var i=0;i<c.length;i++)n(c[i].className,c[i].cssClass);else{var l=t;if("undefined"==typeof s){var o=e(l);o&&(s=o.cssClass)}for(var r=document.querySelectorAll("."+s),_=0;_<r.length;_++)a(r[_],l)}}function a(n,a){if(!("object"==typeof n&&n instanceof Element))throw new Error("Invalid argument provided to upgrade MDL element.");var l=i("mdl-componentupgrading",!0,!0);if(n.dispatchEvent(l),!l.defaultPrevented){var o=t(n),r=[];if(a)s(n,a)||r.push(e(a));else{var _=n.classList;c.forEach(function(e){_.contains(e.cssClass)&&r.indexOf(e)===-1&&!s(n,e.className)&&r.push(e)})}for(var d,h=0,u=r.length;h<u;h++){if(d=r[h],!d)throw new Error("Unable to find a registered component for the given class.");o.push(d.className),n.setAttribute("data-upgraded",o.join(","));var E=new d.classConstructor(n);E[C]=d,p.push(E);for(var m=0,L=d.callbacks.length;m<L;m++)d.callbacks[m](n);d.widget&&(n[d.className]=E);var I=i("mdl-componentupgraded",!0,!1);n.dispatchEvent(I)}}}function l(e){Array.isArray(e)||(e=e instanceof Element?[e]:Array.prototype.slice.call(e));for(var t,s=0,i=e.length;s<i;s++)t=e[s],t instanceof HTMLElement&&(a(t),t.children.length>0&&l(t.children))}function o(t){var s="undefined"==typeof t.widget&&"undefined"==typeof t.widget,i=!0;s||(i=t.widget||t.widget);var n={classConstructor:t.constructor||t.constructor,className:t.classAsString||t.classAsString,cssClass:t.cssClass||t.cssClass,widget:i,callbacks:[]};if(c.forEach(function(e){if(e.cssClass===n.cssClass)throw new Error("The provided cssClass has already been registered: "+e.cssClass);if(e.className===n.className)throw new Error("The provided className has already been registered")}),t.constructor.prototype.hasOwnProperty(C))throw new Error("MDL component classes must not have "+C+" defined as a property.");var a=e(t.classAsString,n);a||c.push(n)}function r(t,s){var i=e(t);i&&i.callbacks.push(s)}function _(){for(var e=0;e<c.length;e++)n(c[e].className)}function d(e){if(e){var t=p.indexOf(e);p.splice(t,1);var s=e.element_.getAttribute("data-upgraded").split(","),n=s.indexOf(e[C].classAsString);s.splice(n,1),e.element_.setAttribute("data-upgraded",s.join(","));var a=i("mdl-componentdowngraded",!0,!1);e.element_.dispatchEvent(a)}}function h(e){var t=function(e){p.filter(function(t){return t.element_===e}).forEach(d)};if(e instanceof Array||e instanceof NodeList)for(var s=0;s<e.length;s++)t(e[s]);else{if(!(e instanceof Node))throw new Error("Invalid argument provided to downgrade MDL nodes.");t(e)}}var c=[],p=[],C="mdlComponentConfigInternal_";return{upgradeDom:n,upgradeElement:a,upgradeElements:l,upgradeAllRegistered:_,registerUpgradedCallback:r,register:o,downgradeElements:h}}(),s.ComponentConfigPublic,s.ComponentConfig,s.Component,s.upgradeDom=s.upgradeDom,s.upgradeElement=s.upgradeElement,s.upgradeElements=s.upgradeElements,s.upgradeAllRegistered=s.upgradeAllRegistered,s.registerUpgradedCallback=s.registerUpgradedCallback,s.register=s.register,s.downgradeElements=s.downgradeElements,window.componentHandler=s,window.componentHandler=s,window.addEventListener("load",function(){"classList"in document.createElement("div")&&"querySelector"in document&&"addEventListener"in window&&Array.prototype.forEach?(document.documentElement.classList.add("mdl-js"),s.upgradeAllRegistered()):(s.upgradeElement=function(){},s.register=function(){})}),Date.now||(Date.now=function(){return(new Date).getTime()},Date.now=Date.now);for(var i=["webkit","moz"],n=0;n<i.length&&!window.requestAnimationFrame;++n){var a=i[n];window.requestAnimationFrame=window[a+"RequestAnimationFrame"],window.cancelAnimationFrame=window[a+"CancelAnimationFrame"]||window[a+"CancelRequestAnimationFrame"],window.requestAnimationFrame=window.requestAnimationFrame,window.cancelAnimationFrame=window.cancelAnimationFrame}if(/iP(ad|hone|od).*OS 6/.test(window.navigator.userAgent)||!window.requestAnimationFrame||!window.cancelAnimationFrame){var l=0;window.requestAnimationFrame=function(e){var t=Date.now(),s=Math.max(l+16,t);return setTimeout(function(){e(l=s)},s-t)},window.cancelAnimationFrame=clearTimeout,window.requestAnimationFrame=window.requestAnimationFrame,window.cancelAnimationFrame=window.cancelAnimationFrame}var o=function(e){this.element_=e,this.init()};window.MaterialButton=o,o.prototype.Constant_={},o.prototype.CssClasses_={RIPPLE_EFFECT:"mdl-js-ripple-effect",RIPPLE_CONTAINER:"mdl-button__ripple-container",RIPPLE:"mdl-ripple"},o.prototype.blurHandler_=function(e){e&&this.element_.blur()},o.prototype.disable=function(){this.element_.disabled=!0},o.prototype.disable=o.prototype.disable,o.prototype.enable=function(){this.element_.disabled=!1},o.prototype.enable=o.prototype.enable,o.prototype.init=function(){if(this.element_){if(this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT)){var e=document.createElement("span");e.classList.add(this.CssClasses_.RIPPLE_CONTAINER),this.rippleElement_=document.createElement("span"),this.rippleElement_.classList.add(this.CssClasses_.RIPPLE),e.appendChild(this.rippleElement_),this.boundRippleBlurHandler=this.blurHandler_.bind(this),this.rippleElement_.addEventListener("mouseup",this.boundRippleBlurHandler),this.element_.appendChild(e)}this.boundButtonBlurHandler=this.blurHandler_.bind(this),this.element_.addEventListener("mouseup",this.boundButtonBlurHandler),this.element_.addEventListener("mouseleave",this.boundButtonBlurHandler)}},s.register({constructor:o,classAsString:"MaterialButton",cssClass:"mdl-js-button",widget:!0});var r=function(e){this.element_=e,this.init()};window.MaterialCheckbox=r,r.prototype.Constant_={TINY_TIMEOUT:.001},r.prototype.CssClasses_={INPUT:"mdl-checkbox__input",BOX_OUTLINE:"mdl-checkbox__box-outline",FOCUS_HELPER:"mdl-checkbox__focus-helper",TICK_OUTLINE:"mdl-checkbox__tick-outline",RIPPLE_EFFECT:"mdl-js-ripple-effect",RIPPLE_IGNORE_EVENTS:"mdl-js-ripple-effect--ignore-events",RIPPLE_CONTAINER:"mdl-checkbox__ripple-container",RIPPLE_CENTER:"mdl-ripple--center",RIPPLE:"mdl-ripple",IS_FOCUSED:"is-focused",IS_DISABLED:"is-disabled",IS_CHECKED:"is-checked",IS_UPGRADED:"is-upgraded"},r.prototype.onChange_=function(e){this.updateClasses_()},r.prototype.onFocus_=function(e){this.element_.classList.add(this.CssClasses_.IS_FOCUSED)},r.prototype.onBlur_=function(e){this.element_.classList.remove(this.CssClasses_.IS_FOCUSED)},r.prototype.onMouseUp_=function(e){this.blur_()},r.prototype.updateClasses_=function(){this.checkDisabled(),this.checkToggleState()},r.prototype.blur_=function(){window.setTimeout(function(){this.inputElement_.blur()}.bind(this),this.Constant_.TINY_TIMEOUT)},r.prototype.checkToggleState=function(){this.inputElement_.checked?this.element_.classList.add(this.CssClasses_.IS_CHECKED):this.element_.classList.remove(this.CssClasses_.IS_CHECKED)},r.prototype.checkToggleState=r.prototype.checkToggleState,r.prototype.checkDisabled=function(){this.inputElement_.disabled?this.element_.classList.add(this.CssClasses_.IS_DISABLED):this.element_.classList.remove(this.CssClasses_.IS_DISABLED)},r.prototype.checkDisabled=r.prototype.checkDisabled,r.prototype.disable=function(){this.inputElement_.disabled=!0,this.updateClasses_()},r.prototype.disable=r.prototype.disable,r.prototype.enable=function(){this.inputElement_.disabled=!1,this.updateClasses_()},r.prototype.enable=r.prototype.enable,r.prototype.check=function(){this.inputElement_.checked=!0,this.updateClasses_()},r.prototype.check=r.prototype.check,r.prototype.uncheck=function(){this.inputElement_.checked=!1,this.updateClasses_()},r.prototype.uncheck=r.prototype.uncheck,r.prototype.init=function(){if(this.element_){this.inputElement_=this.element_.querySelector("."+this.CssClasses_.INPUT);var e=document.createElement("span");e.classList.add(this.CssClasses_.BOX_OUTLINE);var t=document.createElement("span");t.classList.add(this.CssClasses_.FOCUS_HELPER);var s=document.createElement("span");if(s.classList.add(this.CssClasses_.TICK_OUTLINE),e.appendChild(s),this.element_.appendChild(t),this.element_.appendChild(e),this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT)){this.element_.classList.add(this.CssClasses_.RIPPLE_IGNORE_EVENTS),this.rippleContainerElement_=document.createElement("span"),this.rippleContainerElement_.classList.add(this.CssClasses_.RIPPLE_CONTAINER),this.rippleContainerElement_.classList.add(this.CssClasses_.RIPPLE_EFFECT),this.rippleContainerElement_.classList.add(this.CssClasses_.RIPPLE_CENTER),this.boundRippleMouseUp=this.onMouseUp_.bind(this),this.rippleContainerElement_.addEventListener("mouseup",this.boundRippleMouseUp);var i=document.createElement("span");i.classList.add(this.CssClasses_.RIPPLE),this.rippleContainerElement_.appendChild(i),this.element_.appendChild(this.rippleContainerElement_)}this.boundInputOnChange=this.onChange_.bind(this),this.boundInputOnFocus=this.onFocus_.bind(this),this.boundInputOnBlur=this.onBlur_.bind(this),this.boundElementMouseUp=this.onMouseUp_.bind(this),this.inputElement_.addEventListener("change",this.boundInputOnChange),this.inputElement_.addEventListener("focus",this.boundInputOnFocus),this.inputElement_.addEventListener("blur",this.boundInputOnBlur),this.element_.addEventListener("mouseup",this.boundElementMouseUp),this.updateClasses_(),this.element_.classList.add(this.CssClasses_.IS_UPGRADED)}},s.register({constructor:r,classAsString:"MaterialCheckbox",cssClass:"mdl-js-checkbox",widget:!0});var _=function(e){this.element_=e,this.init()};window.MaterialIconToggle=_,_.prototype.Constant_={TINY_TIMEOUT:.001},_.prototype.CssClasses_={INPUT:"mdl-icon-toggle__input",JS_RIPPLE_EFFECT:"mdl-js-ripple-effect",RIPPLE_IGNORE_EVENTS:"mdl-js-ripple-effect--ignore-events",RIPPLE_CONTAINER:"mdl-icon-toggle__ripple-container",RIPPLE_CENTER:"mdl-ripple--center",RIPPLE:"mdl-ripple",IS_FOCUSED:"is-focused",IS_DISABLED:"is-disabled",IS_CHECKED:"is-checked"},_.prototype.onChange_=function(e){this.updateClasses_()},_.prototype.onFocus_=function(e){this.element_.classList.add(this.CssClasses_.IS_FOCUSED)},_.prototype.onBlur_=function(e){this.element_.classList.remove(this.CssClasses_.IS_FOCUSED)},_.prototype.onMouseUp_=function(e){this.blur_()},_.prototype.updateClasses_=function(){this.checkDisabled(),this.checkToggleState()},_.prototype.blur_=function(){window.setTimeout(function(){this.inputElement_.blur()}.bind(this),this.Constant_.TINY_TIMEOUT)},_.prototype.checkToggleState=function(){this.inputElement_.checked?this.element_.classList.add(this.CssClasses_.IS_CHECKED):this.element_.classList.remove(this.CssClasses_.IS_CHECKED)},_.prototype.checkToggleState=_.prototype.checkToggleState,_.prototype.checkDisabled=function(){this.inputElement_.disabled?this.element_.classList.add(this.CssClasses_.IS_DISABLED):this.element_.classList.remove(this.CssClasses_.IS_DISABLED)},_.prototype.checkDisabled=_.prototype.checkDisabled,_.prototype.disable=function(){this.inputElement_.disabled=!0,this.updateClasses_()},_.prototype.disable=_.prototype.disable,_.prototype.enable=function(){this.inputElement_.disabled=!1,this.updateClasses_()},_.prototype.enable=_.prototype.enable,_.prototype.check=function(){this.inputElement_.checked=!0,this.updateClasses_()},_.prototype.check=_.prototype.check,_.prototype.uncheck=function(){this.inputElement_.checked=!1,this.updateClasses_()},_.prototype.uncheck=_.prototype.uncheck,_.prototype.init=function(){if(this.element_){if(this.inputElement_=this.element_.querySelector("."+this.CssClasses_.INPUT),this.element_.classList.contains(this.CssClasses_.JS_RIPPLE_EFFECT)){this.element_.classList.add(this.CssClasses_.RIPPLE_IGNORE_EVENTS),this.rippleContainerElement_=document.createElement("span"),this.rippleContainerElement_.classList.add(this.CssClasses_.RIPPLE_CONTAINER),this.rippleContainerElement_.classList.add(this.CssClasses_.JS_RIPPLE_EFFECT),this.rippleContainerElement_.classList.add(this.CssClasses_.RIPPLE_CENTER),this.boundRippleMouseUp=this.onMouseUp_.bind(this),this.rippleContainerElement_.addEventListener("mouseup",this.boundRippleMouseUp);var e=document.createElement("span");e.classList.add(this.CssClasses_.RIPPLE),this.rippleContainerElement_.appendChild(e),this.element_.appendChild(this.rippleContainerElement_)}this.boundInputOnChange=this.onChange_.bind(this),this.boundInputOnFocus=this.onFocus_.bind(this),this.boundInputOnBlur=this.onBlur_.bind(this),this.boundElementOnMouseUp=this.onMouseUp_.bind(this),this.inputElement_.addEventListener("change",this.boundInputOnChange),this.inputElement_.addEventListener("focus",this.boundInputOnFocus),this.inputElement_.addEventListener("blur",this.boundInputOnBlur),this.element_.addEventListener("mouseup",this.boundElementOnMouseUp),this.updateClasses_(),this.element_.classList.add("is-upgraded")}},s.register({constructor:_,classAsString:"MaterialIconToggle",cssClass:"mdl-js-icon-toggle",widget:!0});var d=function(e){this.element_=e,this.init()};window.MaterialMenu=d,d.prototype.Constant_={TRANSITION_DURATION_SECONDS:.3,TRANSITION_DURATION_FRACTION:.8,CLOSE_TIMEOUT:150},d.prototype.Keycodes_={ENTER:13,ESCAPE:27,SPACE:32,UP_ARROW:38,DOWN_ARROW:40},d.prototype.CssClasses_={CONTAINER:"mdl-menu__container",OUTLINE:"mdl-menu__outline",ITEM:"mdl-menu__item",ITEM_RIPPLE_CONTAINER:"mdl-menu__item-ripple-container",RIPPLE_EFFECT:"mdl-js-ripple-effect",RIPPLE_IGNORE_EVENTS:"mdl-js-ripple-effect--ignore-events",RIPPLE:"mdl-ripple",IS_UPGRADED:"is-upgraded",IS_VISIBLE:"is-visible",IS_ANIMATING:"is-animating",BOTTOM_LEFT:"mdl-menu--bottom-left",BOTTOM_RIGHT:"mdl-menu--bottom-right",TOP_LEFT:"mdl-menu--top-left",TOP_RIGHT:"mdl-menu--top-right",UNALIGNED:"mdl-menu--unaligned"},d.prototype.init=function(){if(this.element_){var e=document.createElement("div");e.classList.add(this.CssClasses_.CONTAINER),this.element_.parentElement.insertBefore(e,this.element_),this.element_.parentElement.removeChild(this.element_),e.appendChild(this.element_),this.container_=e;var t=document.createElement("div");t.classList.add(this.CssClasses_.OUTLINE),this.outline_=t,e.insertBefore(t,this.element_);var s=this.element_.getAttribute("for")||this.element_.getAttribute("data-mdl-for"),i=null;s&&(i=document.getElementById(s),i&&(this.forElement_=i,i.addEventListener("click",this.handleForClick_.bind(this)),i.addEventListener("keydown",this.handleForKeyboardEvent_.bind(this))));var n=this.element_.querySelectorAll("."+this.CssClasses_.ITEM);this.boundItemKeydown_=this.handleItemKeyboardEvent_.bind(this),this.boundItemClick_=this.handleItemClick_.bind(this);for(var a=0;a<n.length;a++)n[a].addEventListener("click",this.boundItemClick_),n[a].tabIndex="-1",n[a].addEventListener("keydown",this.boundItemKeydown_);if(this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT))for(this.element_.classList.add(this.CssClasses_.RIPPLE_IGNORE_EVENTS),a=0;a<n.length;a++){var l=n[a],o=document.createElement("span");o.classList.add(this.CssClasses_.ITEM_RIPPLE_CONTAINER);var r=document.createElement("span");r.classList.add(this.CssClasses_.RIPPLE),o.appendChild(r),l.appendChild(o),l.classList.add(this.CssClasses_.RIPPLE_EFFECT)}this.element_.classList.contains(this.CssClasses_.BOTTOM_LEFT)&&this.outline_.classList.add(this.CssClasses_.BOTTOM_LEFT),this.element_.classList.contains(this.CssClasses_.BOTTOM_RIGHT)&&this.outline_.classList.add(this.CssClasses_.BOTTOM_RIGHT),this.element_.classList.contains(this.CssClasses_.TOP_LEFT)&&this.outline_.classList.add(this.CssClasses_.TOP_LEFT),this.element_.classList.contains(this.CssClasses_.TOP_RIGHT)&&this.outline_.classList.add(this.CssClasses_.TOP_RIGHT),this.element_.classList.contains(this.CssClasses_.UNALIGNED)&&this.outline_.classList.add(this.CssClasses_.UNALIGNED),e.classList.add(this.CssClasses_.IS_UPGRADED)}},d.prototype.handleForClick_=function(e){if(this.element_&&this.forElement_){var t=this.forElement_.getBoundingClientRect(),s=this.forElement_.parentElement.getBoundingClientRect();this.element_.classList.contains(this.CssClasses_.UNALIGNED)||(this.element_.classList.contains(this.CssClasses_.BOTTOM_RIGHT)?(this.container_.style.right=s.right-t.right+"px",this.container_.style.top=this.forElement_.offsetTop+this.forElement_.offsetHeight+"px"):this.element_.classList.contains(this.CssClasses_.TOP_LEFT)?(this.container_.style.left=this.forElement_.offsetLeft+"px",this.container_.style.bottom=s.bottom-t.top+"px"):this.element_.classList.contains(this.CssClasses_.TOP_RIGHT)?(this.container_.style.right=s.right-t.right+"px",this.container_.style.bottom=s.bottom-t.top+"px"):(this.container_.style.left=this.forElement_.offsetLeft+"px",this.container_.style.top=this.forElement_.offsetTop+this.forElement_.offsetHeight+"px"))}this.toggle(e)},d.prototype.handleForKeyboardEvent_=function(e){if(this.element_&&this.container_&&this.forElement_){var t=this.element_.querySelectorAll("."+this.CssClasses_.ITEM+":not([disabled])");t&&t.length>0&&this.container_.classList.contains(this.CssClasses_.IS_VISIBLE)&&(e.keyCode===this.Keycodes_.UP_ARROW?(e.preventDefault(),t[t.length-1].focus()):e.keyCode===this.Keycodes_.DOWN_ARROW&&(e.preventDefault(),t[0].focus()))}},d.prototype.handleItemKeyboardEvent_=function(e){if(this.element_&&this.container_){var t=this.element_.querySelectorAll("."+this.CssClasses_.ITEM+":not([disabled])");if(t&&t.length>0&&this.container_.classList.contains(this.CssClasses_.IS_VISIBLE)){var s=Array.prototype.slice.call(t).indexOf(e.target);if(e.keyCode===this.Keycodes_.UP_ARROW)e.preventDefault(),s>0?t[s-1].focus():t[t.length-1].focus();else if(e.keyCode===this.Keycodes_.DOWN_ARROW)e.preventDefault(),t.length>s+1?t[s+1].focus():t[0].focus();else if(e.keyCode===this.Keycodes_.SPACE||e.keyCode===this.Keycodes_.ENTER){e.preventDefault();var i=new MouseEvent("mousedown");e.target.dispatchEvent(i),i=new MouseEvent("mouseup"),e.target.dispatchEvent(i),e.target.click()}else e.keyCode===this.Keycodes_.ESCAPE&&(e.preventDefault(),this.hide())}}},d.prototype.handleItemClick_=function(e){e.target.hasAttribute("disabled")?e.stopPropagation():(this.closing_=!0,window.setTimeout(function(e){this.hide(),this.closing_=!1}.bind(this),this.Constant_.CLOSE_TIMEOUT))},d.prototype.applyClip_=function(e,t){this.element_.classList.contains(this.CssClasses_.UNALIGNED)?this.element_.style.clip="":this.element_.classList.contains(this.CssClasses_.BOTTOM_RIGHT)?this.element_.style.clip="rect(0 "+t+"px 0 "+t+"px)":this.element_.classList.contains(this.CssClasses_.TOP_LEFT)?this.element_.style.clip="rect("+e+"px 0 "+e+"px 0)":this.element_.classList.contains(this.CssClasses_.TOP_RIGHT)?this.element_.style.clip="rect("+e+"px "+t+"px "+e+"px "+t+"px)":this.element_.style.clip=""},d.prototype.removeAnimationEndListener_=function(e){e.target.classList.remove(d.prototype.CssClasses_.IS_ANIMATING)},d.prototype.addAnimationEndListener_=function(){this.element_.addEventListener("transitionend",this.removeAnimationEndListener_),this.element_.addEventListener("webkitTransitionEnd",this.removeAnimationEndListener_)},d.prototype.show=function(e){if(this.element_&&this.container_&&this.outline_){var t=this.element_.getBoundingClientRect().height,s=this.element_.getBoundingClientRect().width;this.container_.style.width=s+"px",this.container_.style.height=t+"px",this.outline_.style.width=s+"px",this.outline_.style.height=t+"px";for(var i=this.Constant_.TRANSITION_DURATION_SECONDS*this.Constant_.TRANSITION_DURATION_FRACTION,n=this.element_.querySelectorAll("."+this.CssClasses_.ITEM),a=0;a<n.length;a++){var l=null;l=this.element_.classList.contains(this.CssClasses_.TOP_LEFT)||this.element_.classList.contains(this.CssClasses_.TOP_RIGHT)?(t-n[a].offsetTop-n[a].offsetHeight)/t*i+"s":n[a].offsetTop/t*i+"s",n[a].style.transitionDelay=l}this.applyClip_(t,s),window.requestAnimationFrame(function(){this.element_.classList.add(this.CssClasses_.IS_ANIMATING),this.element_.style.clip="rect(0 "+s+"px "+t+"px 0)",this.container_.classList.add(this.CssClasses_.IS_VISIBLE)}.bind(this)),this.addAnimationEndListener_();var o=function(t){t===e||this.closing_||t.target.parentNode===this.element_||(document.removeEventListener("click",o),this.hide())}.bind(this);document.addEventListener("click",o)}},d.prototype.show=d.prototype.show,d.prototype.hide=function(){if(this.element_&&this.container_&&this.outline_){for(var e=this.element_.querySelectorAll("."+this.CssClasses_.ITEM),t=0;t<e.length;t++)e[t].style.removeProperty("transition-delay");var s=this.element_.getBoundingClientRect(),i=s.height,n=s.width;this.element_.classList.add(this.CssClasses_.IS_ANIMATING),this.applyClip_(i,n),this.container_.classList.remove(this.CssClasses_.IS_VISIBLE),this.addAnimationEndListener_()}},d.prototype.hide=d.prototype.hide,d.prototype.toggle=function(e){this.container_.classList.contains(this.CssClasses_.IS_VISIBLE)?this.hide():this.show(e)},d.prototype.toggle=d.prototype.toggle,s.register({constructor:d,classAsString:"MaterialMenu",cssClass:"mdl-js-menu",widget:!0});var h=function(e){this.element_=e,this.init()};window.MaterialProgress=h,h.prototype.Constant_={},h.prototype.CssClasses_={INDETERMINATE_CLASS:"mdl-progress__indeterminate"},h.prototype.setProgress=function(e){this.element_.classList.contains(this.CssClasses_.INDETERMINATE_CLASS)||(this.progressbar_.style.width=e+"%")},h.prototype.setProgress=h.prototype.setProgress,h.prototype.setBuffer=function(e){this.bufferbar_.style.width=e+"%",this.auxbar_.style.width=100-e+"%"},h.prototype.setBuffer=h.prototype.setBuffer,h.prototype.init=function(){if(this.element_){var e=document.createElement("div");e.className="progressbar bar bar1",this.element_.appendChild(e),this.progressbar_=e,e=document.createElement("div"),e.className="bufferbar bar bar2",this.element_.appendChild(e),this.bufferbar_=e,e=document.createElement("div"),e.className="auxbar bar bar3",this.element_.appendChild(e),this.auxbar_=e,this.progressbar_.style.width="0%",this.bufferbar_.style.width="100%",this.auxbar_.style.width="0%",this.element_.classList.add("is-upgraded")}},s.register({constructor:h,classAsString:"MaterialProgress",cssClass:"mdl-js-progress",widget:!0});var c=function(e){this.element_=e,this.init()};window.MaterialRadio=c,c.prototype.Constant_={TINY_TIMEOUT:.001},c.prototype.CssClasses_={IS_FOCUSED:"is-focused",IS_DISABLED:"is-disabled",IS_CHECKED:"is-checked",IS_UPGRADED:"is-upgraded",JS_RADIO:"mdl-js-radio",RADIO_BTN:"mdl-radio__button",RADIO_OUTER_CIRCLE:"mdl-radio__outer-circle",RADIO_INNER_CIRCLE:"mdl-radio__inner-circle",RIPPLE_EFFECT:"mdl-js-ripple-effect",RIPPLE_IGNORE_EVENTS:"mdl-js-ripple-effect--ignore-events",RIPPLE_CONTAINER:"mdl-radio__ripple-container",RIPPLE_CENTER:"mdl-ripple--center",RIPPLE:"mdl-ripple"},c.prototype.onChange_=function(e){for(var t=document.getElementsByClassName(this.CssClasses_.JS_RADIO),s=0;s<t.length;s++){var i=t[s].querySelector("."+this.CssClasses_.RADIO_BTN);i.getAttribute("name")===this.btnElement_.getAttribute("name")&&"undefined"!=typeof t[s].MaterialRadio&&t[s].MaterialRadio.updateClasses_()}},c.prototype.onFocus_=function(e){this.element_.classList.add(this.CssClasses_.IS_FOCUSED)},c.prototype.onBlur_=function(e){this.element_.classList.remove(this.CssClasses_.IS_FOCUSED)},c.prototype.onMouseup_=function(e){this.blur_()},c.prototype.updateClasses_=function(){this.checkDisabled(),this.checkToggleState()},c.prototype.blur_=function(){window.setTimeout(function(){this.btnElement_.blur()}.bind(this),this.Constant_.TINY_TIMEOUT)},c.prototype.checkDisabled=function(){this.btnElement_.disabled?this.element_.classList.add(this.CssClasses_.IS_DISABLED):this.element_.classList.remove(this.CssClasses_.IS_DISABLED)},c.prototype.checkDisabled=c.prototype.checkDisabled,c.prototype.checkToggleState=function(){this.btnElement_.checked?this.element_.classList.add(this.CssClasses_.IS_CHECKED):this.element_.classList.remove(this.CssClasses_.IS_CHECKED)},c.prototype.checkToggleState=c.prototype.checkToggleState,c.prototype.disable=function(){this.btnElement_.disabled=!0,this.updateClasses_()},c.prototype.disable=c.prototype.disable,c.prototype.enable=function(){this.btnElement_.disabled=!1,this.updateClasses_()},c.prototype.enable=c.prototype.enable,c.prototype.check=function(){this.btnElement_.checked=!0,this.onChange_(null)},c.prototype.check=c.prototype.check,c.prototype.uncheck=function(){this.btnElement_.checked=!1,this.onChange_(null)},c.prototype.uncheck=c.prototype.uncheck,c.prototype.init=function(){if(this.element_){this.btnElement_=this.element_.querySelector("."+this.CssClasses_.RADIO_BTN),this.boundChangeHandler_=this.onChange_.bind(this),this.boundFocusHandler_=this.onChange_.bind(this),this.boundBlurHandler_=this.onBlur_.bind(this),this.boundMouseUpHandler_=this.onMouseup_.bind(this);var e=document.createElement("span");e.classList.add(this.CssClasses_.RADIO_OUTER_CIRCLE);var t=document.createElement("span");t.classList.add(this.CssClasses_.RADIO_INNER_CIRCLE),this.element_.appendChild(e),this.element_.appendChild(t);var s;if(this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT)){this.element_.classList.add(this.CssClasses_.RIPPLE_IGNORE_EVENTS),s=document.createElement("span"),s.classList.add(this.CssClasses_.RIPPLE_CONTAINER),s.classList.add(this.CssClasses_.RIPPLE_EFFECT),s.classList.add(this.CssClasses_.RIPPLE_CENTER),s.addEventListener("mouseup",this.boundMouseUpHandler_);var i=document.createElement("span");i.classList.add(this.CssClasses_.RIPPLE),s.appendChild(i),this.element_.appendChild(s)}this.btnElement_.addEventListener("change",this.boundChangeHandler_),this.btnElement_.addEventListener("focus",this.boundFocusHandler_),this.btnElement_.addEventListener("blur",this.boundBlurHandler_),this.element_.addEventListener("mouseup",this.boundMouseUpHandler_),this.updateClasses_(),this.element_.classList.add(this.CssClasses_.IS_UPGRADED)}},s.register({constructor:c,classAsString:"MaterialRadio",cssClass:"mdl-js-radio",widget:!0});var p=function(e){this.element_=e,this.isIE_=window.navigator.msPointerEnabled,this.init()};window.MaterialSlider=p,p.prototype.Constant_={},p.prototype.CssClasses_={IE_CONTAINER:"mdl-slider__ie-container",SLIDER_CONTAINER:"mdl-slider__container",BACKGROUND_FLEX:"mdl-slider__background-flex",BACKGROUND_LOWER:"mdl-slider__background-lower",BACKGROUND_UPPER:"mdl-slider__background-upper",IS_LOWEST_VALUE:"is-lowest-value",IS_UPGRADED:"is-upgraded"},p.prototype.onInput_=function(e){this.updateValueStyles_()},p.prototype.onChange_=function(e){this.updateValueStyles_()},p.prototype.onMouseUp_=function(e){e.target.blur()},p.prototype.onContainerMouseDown_=function(e){if(e.target===this.element_.parentElement){e.preventDefault();var t=new MouseEvent("mousedown",{target:e.target,buttons:e.buttons,clientX:e.clientX,clientY:this.element_.getBoundingClientRect().y});this.element_.dispatchEvent(t)}},p.prototype.updateValueStyles_=function(){var e=(this.element_.value-this.element_.min)/(this.element_.max-this.element_.min);0===e?this.element_.classList.add(this.CssClasses_.IS_LOWEST_VALUE):this.element_.classList.remove(this.CssClasses_.IS_LOWEST_VALUE),this.isIE_||(this.backgroundLower_.style.flex=e,this.backgroundLower_.style.webkitFlex=e,this.backgroundUpper_.style.flex=1-e,this.backgroundUpper_.style.webkitFlex=1-e)},p.prototype.disable=function(){this.element_.disabled=!0},p.prototype.disable=p.prototype.disable,p.prototype.enable=function(){this.element_.disabled=!1},p.prototype.enable=p.prototype.enable,p.prototype.change=function(e){"undefined"!=typeof e&&(this.element_.value=e),this.updateValueStyles_()},p.prototype.change=p.prototype.change,p.prototype.init=function(){if(this.element_){if(this.isIE_){var e=document.createElement("div");e.classList.add(this.CssClasses_.IE_CONTAINER),this.element_.parentElement.insertBefore(e,this.element_),this.element_.parentElement.removeChild(this.element_),e.appendChild(this.element_)}else{var t=document.createElement("div");t.classList.add(this.CssClasses_.SLIDER_CONTAINER),this.element_.parentElement.insertBefore(t,this.element_),this.element_.parentElement.removeChild(this.element_),t.appendChild(this.element_);var s=document.createElement("div");s.classList.add(this.CssClasses_.BACKGROUND_FLEX),t.appendChild(s),this.backgroundLower_=document.createElement("div"),this.backgroundLower_.classList.add(this.CssClasses_.BACKGROUND_LOWER),s.appendChild(this.backgroundLower_),this.backgroundUpper_=document.createElement("div"),this.backgroundUpper_.classList.add(this.CssClasses_.BACKGROUND_UPPER),s.appendChild(this.backgroundUpper_)}this.boundInputHandler=this.onInput_.bind(this),this.boundChangeHandler=this.onChange_.bind(this),this.boundMouseUpHandler=this.onMouseUp_.bind(this),this.boundContainerMouseDownHandler=this.onContainerMouseDown_.bind(this),this.element_.addEventListener("input",this.boundInputHandler),this.element_.addEventListener("change",this.boundChangeHandler),this.element_.addEventListener("mouseup",this.boundMouseUpHandler),this.element_.parentElement.addEventListener("mousedown",this.boundContainerMouseDownHandler),this.updateValueStyles_(),this.element_.classList.add(this.CssClasses_.IS_UPGRADED)}},s.register({constructor:p,classAsString:"MaterialSlider",cssClass:"mdl-js-slider",widget:!0});var C=function(e){if(this.element_=e,this.textElement_=this.element_.querySelector("."+this.cssClasses_.MESSAGE),this.actionElement_=this.element_.querySelector("."+this.cssClasses_.ACTION),!this.textElement_)throw new Error("There must be a message element for a snackbar.");if(!this.actionElement_)throw new Error("There must be an action element for a snackbar.");this.active=!1,this.actionHandler_=void 0,this.message_=void 0,this.actionText_=void 0,this.queuedNotifications_=[],this.setActionHidden_(!0)};window.MaterialSnackbar=C,C.prototype.Constant_={ANIMATION_LENGTH:250},C.prototype.cssClasses_={SNACKBAR:"mdl-snackbar",MESSAGE:"mdl-snackbar__text",ACTION:"mdl-snackbar__action",ACTIVE:"mdl-snackbar--active"},C.prototype.displaySnackbar_=function(){this.element_.setAttribute("aria-hidden","true"),
+this.actionHandler_&&(this.actionElement_.textContent=this.actionText_,this.actionElement_.addEventListener("click",this.actionHandler_),this.setActionHidden_(!1)),this.textElement_.textContent=this.message_,this.element_.classList.add(this.cssClasses_.ACTIVE),this.element_.setAttribute("aria-hidden","false"),setTimeout(this.cleanup_.bind(this),this.timeout_)},C.prototype.showSnackbar=function(e){if(void 0===e)throw new Error("Please provide a data object with at least a message to display.");if(void 0===e.message)throw new Error("Please provide a message to be displayed.");if(e.actionHandler&&!e.actionText)throw new Error("Please provide action text with the handler.");this.active?this.queuedNotifications_.push(e):(this.active=!0,this.message_=e.message,e.timeout?this.timeout_=e.timeout:this.timeout_=2750,e.actionHandler&&(this.actionHandler_=e.actionHandler),e.actionText&&(this.actionText_=e.actionText),this.displaySnackbar_())},C.prototype.showSnackbar=C.prototype.showSnackbar,C.prototype.checkQueue_=function(){this.queuedNotifications_.length>0&&this.showSnackbar(this.queuedNotifications_.shift())},C.prototype.cleanup_=function(){this.element_.classList.remove(this.cssClasses_.ACTIVE),setTimeout(function(){this.element_.setAttribute("aria-hidden","true"),this.textElement_.textContent="",Boolean(this.actionElement_.getAttribute("aria-hidden"))||(this.setActionHidden_(!0),this.actionElement_.textContent="",this.actionElement_.removeEventListener("click",this.actionHandler_)),this.actionHandler_=void 0,this.message_=void 0,this.actionText_=void 0,this.active=!1,this.checkQueue_()}.bind(this),this.Constant_.ANIMATION_LENGTH)},C.prototype.setActionHidden_=function(e){e?this.actionElement_.setAttribute("aria-hidden","true"):this.actionElement_.removeAttribute("aria-hidden")},s.register({constructor:C,classAsString:"MaterialSnackbar",cssClass:"mdl-js-snackbar",widget:!0});var u=function(e){this.element_=e,this.init()};window.MaterialSpinner=u,u.prototype.Constant_={MDL_SPINNER_LAYER_COUNT:4},u.prototype.CssClasses_={MDL_SPINNER_LAYER:"mdl-spinner__layer",MDL_SPINNER_CIRCLE_CLIPPER:"mdl-spinner__circle-clipper",MDL_SPINNER_CIRCLE:"mdl-spinner__circle",MDL_SPINNER_GAP_PATCH:"mdl-spinner__gap-patch",MDL_SPINNER_LEFT:"mdl-spinner__left",MDL_SPINNER_RIGHT:"mdl-spinner__right"},u.prototype.createLayer=function(e){var t=document.createElement("div");t.classList.add(this.CssClasses_.MDL_SPINNER_LAYER),t.classList.add(this.CssClasses_.MDL_SPINNER_LAYER+"-"+e);var s=document.createElement("div");s.classList.add(this.CssClasses_.MDL_SPINNER_CIRCLE_CLIPPER),s.classList.add(this.CssClasses_.MDL_SPINNER_LEFT);var i=document.createElement("div");i.classList.add(this.CssClasses_.MDL_SPINNER_GAP_PATCH);var n=document.createElement("div");n.classList.add(this.CssClasses_.MDL_SPINNER_CIRCLE_CLIPPER),n.classList.add(this.CssClasses_.MDL_SPINNER_RIGHT);for(var a=[s,i,n],l=0;l<a.length;l++){var o=document.createElement("div");o.classList.add(this.CssClasses_.MDL_SPINNER_CIRCLE),a[l].appendChild(o)}t.appendChild(s),t.appendChild(i),t.appendChild(n),this.element_.appendChild(t)},u.prototype.createLayer=u.prototype.createLayer,u.prototype.stop=function(){this.element_.classList.remove("is-active")},u.prototype.stop=u.prototype.stop,u.prototype.start=function(){this.element_.classList.add("is-active")},u.prototype.start=u.prototype.start,u.prototype.init=function(){if(this.element_){for(var e=1;e<=this.Constant_.MDL_SPINNER_LAYER_COUNT;e++)this.createLayer(e);this.element_.classList.add("is-upgraded")}},s.register({constructor:u,classAsString:"MaterialSpinner",cssClass:"mdl-js-spinner",widget:!0});var E=function(e){this.element_=e,this.init()};window.MaterialSwitch=E,E.prototype.Constant_={TINY_TIMEOUT:.001},E.prototype.CssClasses_={INPUT:"mdl-switch__input",TRACK:"mdl-switch__track",THUMB:"mdl-switch__thumb",FOCUS_HELPER:"mdl-switch__focus-helper",RIPPLE_EFFECT:"mdl-js-ripple-effect",RIPPLE_IGNORE_EVENTS:"mdl-js-ripple-effect--ignore-events",RIPPLE_CONTAINER:"mdl-switch__ripple-container",RIPPLE_CENTER:"mdl-ripple--center",RIPPLE:"mdl-ripple",IS_FOCUSED:"is-focused",IS_DISABLED:"is-disabled",IS_CHECKED:"is-checked"},E.prototype.onChange_=function(e){this.updateClasses_()},E.prototype.onFocus_=function(e){this.element_.classList.add(this.CssClasses_.IS_FOCUSED)},E.prototype.onBlur_=function(e){this.element_.classList.remove(this.CssClasses_.IS_FOCUSED)},E.prototype.onMouseUp_=function(e){this.blur_()},E.prototype.updateClasses_=function(){this.checkDisabled(),this.checkToggleState()},E.prototype.blur_=function(){window.setTimeout(function(){this.inputElement_.blur()}.bind(this),this.Constant_.TINY_TIMEOUT)},E.prototype.checkDisabled=function(){this.inputElement_.disabled?this.element_.classList.add(this.CssClasses_.IS_DISABLED):this.element_.classList.remove(this.CssClasses_.IS_DISABLED)},E.prototype.checkDisabled=E.prototype.checkDisabled,E.prototype.checkToggleState=function(){this.inputElement_.checked?this.element_.classList.add(this.CssClasses_.IS_CHECKED):this.element_.classList.remove(this.CssClasses_.IS_CHECKED)},E.prototype.checkToggleState=E.prototype.checkToggleState,E.prototype.disable=function(){this.inputElement_.disabled=!0,this.updateClasses_()},E.prototype.disable=E.prototype.disable,E.prototype.enable=function(){this.inputElement_.disabled=!1,this.updateClasses_()},E.prototype.enable=E.prototype.enable,E.prototype.on=function(){this.inputElement_.checked=!0,this.updateClasses_()},E.prototype.on=E.prototype.on,E.prototype.off=function(){this.inputElement_.checked=!1,this.updateClasses_()},E.prototype.off=E.prototype.off,E.prototype.init=function(){if(this.element_){this.inputElement_=this.element_.querySelector("."+this.CssClasses_.INPUT);var e=document.createElement("div");e.classList.add(this.CssClasses_.TRACK);var t=document.createElement("div");t.classList.add(this.CssClasses_.THUMB);var s=document.createElement("span");if(s.classList.add(this.CssClasses_.FOCUS_HELPER),t.appendChild(s),this.element_.appendChild(e),this.element_.appendChild(t),this.boundMouseUpHandler=this.onMouseUp_.bind(this),this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT)){this.element_.classList.add(this.CssClasses_.RIPPLE_IGNORE_EVENTS),this.rippleContainerElement_=document.createElement("span"),this.rippleContainerElement_.classList.add(this.CssClasses_.RIPPLE_CONTAINER),this.rippleContainerElement_.classList.add(this.CssClasses_.RIPPLE_EFFECT),this.rippleContainerElement_.classList.add(this.CssClasses_.RIPPLE_CENTER),this.rippleContainerElement_.addEventListener("mouseup",this.boundMouseUpHandler);var i=document.createElement("span");i.classList.add(this.CssClasses_.RIPPLE),this.rippleContainerElement_.appendChild(i),this.element_.appendChild(this.rippleContainerElement_)}this.boundChangeHandler=this.onChange_.bind(this),this.boundFocusHandler=this.onFocus_.bind(this),this.boundBlurHandler=this.onBlur_.bind(this),this.inputElement_.addEventListener("change",this.boundChangeHandler),this.inputElement_.addEventListener("focus",this.boundFocusHandler),this.inputElement_.addEventListener("blur",this.boundBlurHandler),this.element_.addEventListener("mouseup",this.boundMouseUpHandler),this.updateClasses_(),this.element_.classList.add("is-upgraded")}},s.register({constructor:E,classAsString:"MaterialSwitch",cssClass:"mdl-js-switch",widget:!0});var m=function(e){this.element_=e,this.init()};window.MaterialTabs=m,m.prototype.Constant_={},m.prototype.CssClasses_={TAB_CLASS:"mdl-tabs__tab",PANEL_CLASS:"mdl-tabs__panel",ACTIVE_CLASS:"is-active",UPGRADED_CLASS:"is-upgraded",MDL_JS_RIPPLE_EFFECT:"mdl-js-ripple-effect",MDL_RIPPLE_CONTAINER:"mdl-tabs__ripple-container",MDL_RIPPLE:"mdl-ripple",MDL_JS_RIPPLE_EFFECT_IGNORE_EVENTS:"mdl-js-ripple-effect--ignore-events"},m.prototype.initTabs_=function(){this.element_.classList.contains(this.CssClasses_.MDL_JS_RIPPLE_EFFECT)&&this.element_.classList.add(this.CssClasses_.MDL_JS_RIPPLE_EFFECT_IGNORE_EVENTS),this.tabs_=this.element_.querySelectorAll("."+this.CssClasses_.TAB_CLASS),this.panels_=this.element_.querySelectorAll("."+this.CssClasses_.PANEL_CLASS);for(var t=0;t<this.tabs_.length;t++)new e(this.tabs_[t],this);this.element_.classList.add(this.CssClasses_.UPGRADED_CLASS)},m.prototype.resetTabState_=function(){for(var e=0;e<this.tabs_.length;e++)this.tabs_[e].classList.remove(this.CssClasses_.ACTIVE_CLASS)},m.prototype.resetPanelState_=function(){for(var e=0;e<this.panels_.length;e++)this.panels_[e].classList.remove(this.CssClasses_.ACTIVE_CLASS)},m.prototype.init=function(){this.element_&&this.initTabs_()},s.register({constructor:m,classAsString:"MaterialTabs",cssClass:"mdl-js-tabs"});var L=function(e){this.element_=e,this.maxRows=this.Constant_.NO_MAX_ROWS,this.init()};window.MaterialTextfield=L,L.prototype.Constant_={NO_MAX_ROWS:-1,MAX_ROWS_ATTRIBUTE:"maxrows"},L.prototype.CssClasses_={LABEL:"mdl-textfield__label",INPUT:"mdl-textfield__input",IS_DIRTY:"is-dirty",IS_FOCUSED:"is-focused",IS_DISABLED:"is-disabled",IS_INVALID:"is-invalid",IS_UPGRADED:"is-upgraded",HAS_PLACEHOLDER:"has-placeholder"},L.prototype.onKeyDown_=function(e){var t=e.target.value.split("\n").length;13===e.keyCode&&t>=this.maxRows&&e.preventDefault()},L.prototype.onFocus_=function(e){this.element_.classList.add(this.CssClasses_.IS_FOCUSED)},L.prototype.onBlur_=function(e){this.element_.classList.remove(this.CssClasses_.IS_FOCUSED)},L.prototype.onReset_=function(e){this.updateClasses_()},L.prototype.updateClasses_=function(){this.checkDisabled(),this.checkValidity(),this.checkDirty(),this.checkFocus()},L.prototype.checkDisabled=function(){this.input_.disabled?this.element_.classList.add(this.CssClasses_.IS_DISABLED):this.element_.classList.remove(this.CssClasses_.IS_DISABLED)},L.prototype.checkDisabled=L.prototype.checkDisabled,L.prototype.checkFocus=function(){Boolean(this.element_.querySelector(":focus"))?this.element_.classList.add(this.CssClasses_.IS_FOCUSED):this.element_.classList.remove(this.CssClasses_.IS_FOCUSED)},L.prototype.checkFocus=L.prototype.checkFocus,L.prototype.checkValidity=function(){this.input_.validity&&(this.input_.validity.valid?this.element_.classList.remove(this.CssClasses_.IS_INVALID):this.element_.classList.add(this.CssClasses_.IS_INVALID))},L.prototype.checkValidity=L.prototype.checkValidity,L.prototype.checkDirty=function(){this.input_.value&&this.input_.value.length>0?this.element_.classList.add(this.CssClasses_.IS_DIRTY):this.element_.classList.remove(this.CssClasses_.IS_DIRTY)},L.prototype.checkDirty=L.prototype.checkDirty,L.prototype.disable=function(){this.input_.disabled=!0,this.updateClasses_()},L.prototype.disable=L.prototype.disable,L.prototype.enable=function(){this.input_.disabled=!1,this.updateClasses_()},L.prototype.enable=L.prototype.enable,L.prototype.change=function(e){this.input_.value=e||"",this.updateClasses_()},L.prototype.change=L.prototype.change,L.prototype.init=function(){if(this.element_&&(this.label_=this.element_.querySelector("."+this.CssClasses_.LABEL),this.input_=this.element_.querySelector("."+this.CssClasses_.INPUT),this.input_)){this.input_.hasAttribute(this.Constant_.MAX_ROWS_ATTRIBUTE)&&(this.maxRows=parseInt(this.input_.getAttribute(this.Constant_.MAX_ROWS_ATTRIBUTE),10),isNaN(this.maxRows)&&(this.maxRows=this.Constant_.NO_MAX_ROWS)),this.input_.hasAttribute("placeholder")&&this.element_.classList.add(this.CssClasses_.HAS_PLACEHOLDER),this.boundUpdateClassesHandler=this.updateClasses_.bind(this),this.boundFocusHandler=this.onFocus_.bind(this),this.boundBlurHandler=this.onBlur_.bind(this),this.boundResetHandler=this.onReset_.bind(this),this.input_.addEventListener("input",this.boundUpdateClassesHandler),this.input_.addEventListener("focus",this.boundFocusHandler),this.input_.addEventListener("blur",this.boundBlurHandler),this.input_.addEventListener("reset",this.boundResetHandler),this.maxRows!==this.Constant_.NO_MAX_ROWS&&(this.boundKeyDownHandler=this.onKeyDown_.bind(this),this.input_.addEventListener("keydown",this.boundKeyDownHandler));var e=this.element_.classList.contains(this.CssClasses_.IS_INVALID);this.updateClasses_(),this.element_.classList.add(this.CssClasses_.IS_UPGRADED),e&&this.element_.classList.add(this.CssClasses_.IS_INVALID),this.input_.hasAttribute("autofocus")&&(this.element_.focus(),this.checkFocus())}},s.register({constructor:L,classAsString:"MaterialTextfield",cssClass:"mdl-js-textfield",widget:!0});var I=function(e){this.element_=e,this.init()};window.MaterialTooltip=I,I.prototype.Constant_={},I.prototype.CssClasses_={IS_ACTIVE:"is-active",BOTTOM:"mdl-tooltip--bottom",LEFT:"mdl-tooltip--left",RIGHT:"mdl-tooltip--right",TOP:"mdl-tooltip--top"},I.prototype.handleMouseEnter_=function(e){var t=e.target.getBoundingClientRect(),s=t.left+t.width/2,i=t.top+t.height/2,n=-1*(this.element_.offsetWidth/2),a=-1*(this.element_.offsetHeight/2);this.element_.classList.contains(this.CssClasses_.LEFT)||this.element_.classList.contains(this.CssClasses_.RIGHT)?(s=t.width/2,i+a<0?(this.element_.style.top="0",this.element_.style.marginTop="0"):(this.element_.style.top=i+"px",this.element_.style.marginTop=a+"px")):s+n<0?(this.element_.style.left="0",this.element_.style.marginLeft="0"):(this.element_.style.left=s+"px",this.element_.style.marginLeft=n+"px"),this.element_.classList.contains(this.CssClasses_.TOP)?this.element_.style.top=t.top-this.element_.offsetHeight-10+"px":this.element_.classList.contains(this.CssClasses_.RIGHT)?this.element_.style.left=t.left+t.width+10+"px":this.element_.classList.contains(this.CssClasses_.LEFT)?this.element_.style.left=t.left-this.element_.offsetWidth-10+"px":this.element_.style.top=t.top+t.height+10+"px",this.element_.classList.add(this.CssClasses_.IS_ACTIVE)},I.prototype.hideTooltip_=function(){this.element_.classList.remove(this.CssClasses_.IS_ACTIVE)},I.prototype.init=function(){if(this.element_){var e=this.element_.getAttribute("for")||this.element_.getAttribute("data-mdl-for");e&&(this.forElement_=document.getElementById(e)),this.forElement_&&(this.forElement_.hasAttribute("tabindex")||this.forElement_.setAttribute("tabindex","0"),this.boundMouseEnterHandler=this.handleMouseEnter_.bind(this),this.boundMouseLeaveAndScrollHandler=this.hideTooltip_.bind(this),this.forElement_.addEventListener("mouseenter",this.boundMouseEnterHandler,!1),this.forElement_.addEventListener("touchend",this.boundMouseEnterHandler,!1),this.forElement_.addEventListener("mouseleave",this.boundMouseLeaveAndScrollHandler,!1),window.addEventListener("scroll",this.boundMouseLeaveAndScrollHandler,!0),window.addEventListener("touchstart",this.boundMouseLeaveAndScrollHandler))}},s.register({constructor:I,classAsString:"MaterialTooltip",cssClass:"mdl-tooltip"});var f=function(e){this.element_=e,this.init()};window.MaterialLayout=f,f.prototype.Constant_={MAX_WIDTH:"(max-width: 1024px)",TAB_SCROLL_PIXELS:100,RESIZE_TIMEOUT:100,MENU_ICON:"&#xE5D2;",CHEVRON_LEFT:"chevron_left",CHEVRON_RIGHT:"chevron_right"},f.prototype.Keycodes_={ENTER:13,ESCAPE:27,SPACE:32},f.prototype.Mode_={STANDARD:0,SEAMED:1,WATERFALL:2,SCROLL:3},f.prototype.CssClasses_={CONTAINER:"mdl-layout__container",HEADER:"mdl-layout__header",DRAWER:"mdl-layout__drawer",CONTENT:"mdl-layout__content",DRAWER_BTN:"mdl-layout__drawer-button",ICON:"material-icons",JS_RIPPLE_EFFECT:"mdl-js-ripple-effect",RIPPLE_CONTAINER:"mdl-layout__tab-ripple-container",RIPPLE:"mdl-ripple",RIPPLE_IGNORE_EVENTS:"mdl-js-ripple-effect--ignore-events",HEADER_SEAMED:"mdl-layout__header--seamed",HEADER_WATERFALL:"mdl-layout__header--waterfall",HEADER_SCROLL:"mdl-layout__header--scroll",FIXED_HEADER:"mdl-layout--fixed-header",OBFUSCATOR:"mdl-layout__obfuscator",TAB_BAR:"mdl-layout__tab-bar",TAB_CONTAINER:"mdl-layout__tab-bar-container",TAB:"mdl-layout__tab",TAB_BAR_BUTTON:"mdl-layout__tab-bar-button",TAB_BAR_LEFT_BUTTON:"mdl-layout__tab-bar-left-button",TAB_BAR_RIGHT_BUTTON:"mdl-layout__tab-bar-right-button",TAB_MANUAL_SWITCH:"mdl-layout__tab-manual-switch",PANEL:"mdl-layout__tab-panel",HAS_DRAWER:"has-drawer",HAS_TABS:"has-tabs",HAS_SCROLLING_HEADER:"has-scrolling-header",CASTING_SHADOW:"is-casting-shadow",IS_COMPACT:"is-compact",IS_SMALL_SCREEN:"is-small-screen",IS_DRAWER_OPEN:"is-visible",IS_ACTIVE:"is-active",IS_UPGRADED:"is-upgraded",IS_ANIMATING:"is-animating",ON_LARGE_SCREEN:"mdl-layout--large-screen-only",ON_SMALL_SCREEN:"mdl-layout--small-screen-only"},f.prototype.contentScrollHandler_=function(){if(!this.header_.classList.contains(this.CssClasses_.IS_ANIMATING)){var e=!this.element_.classList.contains(this.CssClasses_.IS_SMALL_SCREEN)||this.element_.classList.contains(this.CssClasses_.FIXED_HEADER);this.content_.scrollTop>0&&!this.header_.classList.contains(this.CssClasses_.IS_COMPACT)?(this.header_.classList.add(this.CssClasses_.CASTING_SHADOW),this.header_.classList.add(this.CssClasses_.IS_COMPACT),e&&this.header_.classList.add(this.CssClasses_.IS_ANIMATING)):this.content_.scrollTop<=0&&this.header_.classList.contains(this.CssClasses_.IS_COMPACT)&&(this.header_.classList.remove(this.CssClasses_.CASTING_SHADOW),this.header_.classList.remove(this.CssClasses_.IS_COMPACT),e&&this.header_.classList.add(this.CssClasses_.IS_ANIMATING))}},f.prototype.keyboardEventHandler_=function(e){e.keyCode===this.Keycodes_.ESCAPE&&this.drawer_.classList.contains(this.CssClasses_.IS_DRAWER_OPEN)&&this.toggleDrawer()},f.prototype.screenSizeHandler_=function(){this.screenSizeMediaQuery_.matches?this.element_.classList.add(this.CssClasses_.IS_SMALL_SCREEN):(this.element_.classList.remove(this.CssClasses_.IS_SMALL_SCREEN),this.drawer_&&(this.drawer_.classList.remove(this.CssClasses_.IS_DRAWER_OPEN),this.obfuscator_.classList.remove(this.CssClasses_.IS_DRAWER_OPEN)))},f.prototype.drawerToggleHandler_=function(e){if(e&&"keydown"===e.type){if(e.keyCode!==this.Keycodes_.SPACE&&e.keyCode!==this.Keycodes_.ENTER)return;e.preventDefault()}this.toggleDrawer()},f.prototype.headerTransitionEndHandler_=function(){this.header_.classList.remove(this.CssClasses_.IS_ANIMATING)},f.prototype.headerClickHandler_=function(){this.header_.classList.contains(this.CssClasses_.IS_COMPACT)&&(this.header_.classList.remove(this.CssClasses_.IS_COMPACT),this.header_.classList.add(this.CssClasses_.IS_ANIMATING))},f.prototype.resetTabState_=function(e){for(var t=0;t<e.length;t++)e[t].classList.remove(this.CssClasses_.IS_ACTIVE)},f.prototype.resetPanelState_=function(e){for(var t=0;t<e.length;t++)e[t].classList.remove(this.CssClasses_.IS_ACTIVE)},f.prototype.toggleDrawer=function(){var e=this.element_.querySelector("."+this.CssClasses_.DRAWER_BTN);this.drawer_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN),this.obfuscator_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN),this.drawer_.classList.contains(this.CssClasses_.IS_DRAWER_OPEN)?(this.drawer_.setAttribute("aria-hidden","false"),e.setAttribute("aria-expanded","true")):(this.drawer_.setAttribute("aria-hidden","true"),e.setAttribute("aria-expanded","false"))},f.prototype.toggleDrawer=f.prototype.toggleDrawer,f.prototype.init=function(){if(this.element_){var e=document.createElement("div");e.classList.add(this.CssClasses_.CONTAINER);var s=this.element_.querySelector(":focus");this.element_.parentElement.insertBefore(e,this.element_),this.element_.parentElement.removeChild(this.element_),e.appendChild(this.element_),s&&s.focus();for(var i=this.element_.childNodes,n=i.length,a=0;a<n;a++){var l=i[a];l.classList&&l.classList.contains(this.CssClasses_.HEADER)&&(this.header_=l),l.classList&&l.classList.contains(this.CssClasses_.DRAWER)&&(this.drawer_=l),l.classList&&l.classList.contains(this.CssClasses_.CONTENT)&&(this.content_=l)}window.addEventListener("pageshow",function(e){e.persisted&&(this.element_.style.overflowY="hidden",requestAnimationFrame(function(){this.element_.style.overflowY=""}.bind(this)))}.bind(this),!1),this.header_&&(this.tabBar_=this.header_.querySelector("."+this.CssClasses_.TAB_BAR));var o=this.Mode_.STANDARD;if(this.header_&&(this.header_.classList.contains(this.CssClasses_.HEADER_SEAMED)?o=this.Mode_.SEAMED:this.header_.classList.contains(this.CssClasses_.HEADER_WATERFALL)?(o=this.Mode_.WATERFALL,this.header_.addEventListener("transitionend",this.headerTransitionEndHandler_.bind(this)),this.header_.addEventListener("click",this.headerClickHandler_.bind(this))):this.header_.classList.contains(this.CssClasses_.HEADER_SCROLL)&&(o=this.Mode_.SCROLL,e.classList.add(this.CssClasses_.HAS_SCROLLING_HEADER)),o===this.Mode_.STANDARD?(this.header_.classList.add(this.CssClasses_.CASTING_SHADOW),this.tabBar_&&this.tabBar_.classList.add(this.CssClasses_.CASTING_SHADOW)):o===this.Mode_.SEAMED||o===this.Mode_.SCROLL?(this.header_.classList.remove(this.CssClasses_.CASTING_SHADOW),this.tabBar_&&this.tabBar_.classList.remove(this.CssClasses_.CASTING_SHADOW)):o===this.Mode_.WATERFALL&&(this.content_.addEventListener("scroll",this.contentScrollHandler_.bind(this)),this.contentScrollHandler_())),this.drawer_){var r=this.element_.querySelector("."+this.CssClasses_.DRAWER_BTN);if(!r){r=document.createElement("div"),r.setAttribute("aria-expanded","false"),r.setAttribute("role","button"),r.setAttribute("tabindex","0"),r.classList.add(this.CssClasses_.DRAWER_BTN);var _=document.createElement("i");_.classList.add(this.CssClasses_.ICON),_.innerHTML=this.Constant_.MENU_ICON,r.appendChild(_)}this.drawer_.classList.contains(this.CssClasses_.ON_LARGE_SCREEN)?r.classList.add(this.CssClasses_.ON_LARGE_SCREEN):this.drawer_.classList.contains(this.CssClasses_.ON_SMALL_SCREEN)&&r.classList.add(this.CssClasses_.ON_SMALL_SCREEN),r.addEventListener("click",this.drawerToggleHandler_.bind(this)),r.addEventListener("keydown",this.drawerToggleHandler_.bind(this)),this.element_.classList.add(this.CssClasses_.HAS_DRAWER),this.element_.classList.contains(this.CssClasses_.FIXED_HEADER)?this.header_.insertBefore(r,this.header_.firstChild):this.element_.insertBefore(r,this.content_);var d=document.createElement("div");d.classList.add(this.CssClasses_.OBFUSCATOR),this.element_.appendChild(d),d.addEventListener("click",this.drawerToggleHandler_.bind(this)),this.obfuscator_=d,this.drawer_.addEventListener("keydown",this.keyboardEventHandler_.bind(this)),this.drawer_.setAttribute("aria-hidden","true")}if(this.screenSizeMediaQuery_=window.matchMedia(this.Constant_.MAX_WIDTH),this.screenSizeMediaQuery_.addListener(this.screenSizeHandler_.bind(this)),this.screenSizeHandler_(),this.header_&&this.tabBar_){this.element_.classList.add(this.CssClasses_.HAS_TABS);var h=document.createElement("div");h.classList.add(this.CssClasses_.TAB_CONTAINER),this.header_.insertBefore(h,this.tabBar_),this.header_.removeChild(this.tabBar_);var c=document.createElement("div");c.classList.add(this.CssClasses_.TAB_BAR_BUTTON),c.classList.add(this.CssClasses_.TAB_BAR_LEFT_BUTTON);var p=document.createElement("i");p.classList.add(this.CssClasses_.ICON),p.textContent=this.Constant_.CHEVRON_LEFT,c.appendChild(p),c.addEventListener("click",function(){this.tabBar_.scrollLeft-=this.Constant_.TAB_SCROLL_PIXELS}.bind(this));var C=document.createElement("div");C.classList.add(this.CssClasses_.TAB_BAR_BUTTON),C.classList.add(this.CssClasses_.TAB_BAR_RIGHT_BUTTON);var u=document.createElement("i");u.classList.add(this.CssClasses_.ICON),u.textContent=this.Constant_.CHEVRON_RIGHT,C.appendChild(u),C.addEventListener("click",function(){this.tabBar_.scrollLeft+=this.Constant_.TAB_SCROLL_PIXELS}.bind(this)),h.appendChild(c),h.appendChild(this.tabBar_),h.appendChild(C);var E=function(){this.tabBar_.scrollLeft>0?c.classList.add(this.CssClasses_.IS_ACTIVE):c.classList.remove(this.CssClasses_.IS_ACTIVE),this.tabBar_.scrollLeft<this.tabBar_.scrollWidth-this.tabBar_.offsetWidth?C.classList.add(this.CssClasses_.IS_ACTIVE):C.classList.remove(this.CssClasses_.IS_ACTIVE)}.bind(this);this.tabBar_.addEventListener("scroll",E),E();var m=function(){this.resizeTimeoutId_&&clearTimeout(this.resizeTimeoutId_),this.resizeTimeoutId_=setTimeout(function(){E(),this.resizeTimeoutId_=null}.bind(this),this.Constant_.RESIZE_TIMEOUT)}.bind(this);window.addEventListener("resize",m),this.tabBar_.classList.contains(this.CssClasses_.JS_RIPPLE_EFFECT)&&this.tabBar_.classList.add(this.CssClasses_.RIPPLE_IGNORE_EVENTS);for(var L=this.tabBar_.querySelectorAll("."+this.CssClasses_.TAB),I=this.content_.querySelectorAll("."+this.CssClasses_.PANEL),f=0;f<L.length;f++)new t(L[f],L,I,this)}this.element_.classList.add(this.CssClasses_.IS_UPGRADED)}},window.MaterialLayoutTab=t,s.register({constructor:f,classAsString:"MaterialLayout",cssClass:"mdl-js-layout"});var b=function(e){this.element_=e,this.init()};window.MaterialDataTable=b,b.prototype.Constant_={},b.prototype.CssClasses_={DATA_TABLE:"mdl-data-table",SELECTABLE:"mdl-data-table--selectable",SELECT_ELEMENT:"mdl-data-table__select",IS_SELECTED:"is-selected",IS_UPGRADED:"is-upgraded"},b.prototype.selectRow_=function(e,t,s){return t?function(){e.checked?t.classList.add(this.CssClasses_.IS_SELECTED):t.classList.remove(this.CssClasses_.IS_SELECTED)}.bind(this):s?function(){var t,i;if(e.checked)for(t=0;t<s.length;t++)i=s[t].querySelector("td").querySelector(".mdl-checkbox"),i.MaterialCheckbox.check(),s[t].classList.add(this.CssClasses_.IS_SELECTED);else for(t=0;t<s.length;t++)i=s[t].querySelector("td").querySelector(".mdl-checkbox"),i.MaterialCheckbox.uncheck(),s[t].classList.remove(this.CssClasses_.IS_SELECTED)}.bind(this):void 0},b.prototype.createCheckbox_=function(e,t){var i=document.createElement("label"),n=["mdl-checkbox","mdl-js-checkbox","mdl-js-ripple-effect",this.CssClasses_.SELECT_ELEMENT];i.className=n.join(" ");var a=document.createElement("input");return a.type="checkbox",a.classList.add("mdl-checkbox__input"),e?(a.checked=e.classList.contains(this.CssClasses_.IS_SELECTED),a.addEventListener("change",this.selectRow_(a,e))):t&&a.addEventListener("change",this.selectRow_(a,null,t)),i.appendChild(a),s.upgradeElement(i,"MaterialCheckbox"),i},b.prototype.init=function(){if(this.element_){var e=this.element_.querySelector("th"),t=Array.prototype.slice.call(this.element_.querySelectorAll("tbody tr")),s=Array.prototype.slice.call(this.element_.querySelectorAll("tfoot tr")),i=t.concat(s);if(this.element_.classList.contains(this.CssClasses_.SELECTABLE)){var n=document.createElement("th"),a=this.createCheckbox_(null,i);n.appendChild(a),e.parentElement.insertBefore(n,e);for(var l=0;l<i.length;l++){var o=i[l].querySelector("td");if(o){var r=document.createElement("td");if("TBODY"===i[l].parentNode.nodeName.toUpperCase()){var _=this.createCheckbox_(i[l]);r.appendChild(_)}i[l].insertBefore(r,o)}}this.element_.classList.add(this.CssClasses_.IS_UPGRADED)}}},s.register({constructor:b,classAsString:"MaterialDataTable",cssClass:"mdl-js-data-table"});var S=function(e){this.element_=e,this.init()};window.MaterialRipple=S,S.prototype.Constant_={INITIAL_SCALE:"scale(0.0001, 0.0001)",INITIAL_SIZE:"1px",INITIAL_OPACITY:"0.4",FINAL_OPACITY:"0",FINAL_SCALE:""},S.prototype.CssClasses_={RIPPLE_CENTER:"mdl-ripple--center",RIPPLE_EFFECT_IGNORE_EVENTS:"mdl-js-ripple-effect--ignore-events",RIPPLE:"mdl-ripple",IS_ANIMATING:"is-animating",IS_VISIBLE:"is-visible"},S.prototype.downHandler_=function(e){if(!this.rippleElement_.style.width&&!this.rippleElement_.style.height){var t=this.element_.getBoundingClientRect();this.boundHeight=t.height,this.boundWidth=t.width,this.rippleSize_=2*Math.sqrt(t.width*t.width+t.height*t.height)+2,this.rippleElement_.style.width=this.rippleSize_+"px",this.rippleElement_.style.height=this.rippleSize_+"px"}if(this.rippleElement_.classList.add(this.CssClasses_.IS_VISIBLE),"mousedown"===e.type&&this.ignoringMouseDown_)this.ignoringMouseDown_=!1;else{"touchstart"===e.type&&(this.ignoringMouseDown_=!0);var s=this.getFrameCount();if(s>0)return;this.setFrameCount(1);var i,n,a=e.currentTarget.getBoundingClientRect();if(0===e.clientX&&0===e.clientY)i=Math.round(a.width/2),n=Math.round(a.height/2);else{var l=void 0!==e.clientX?e.clientX:e.touches[0].clientX,o=void 0!==e.clientY?e.clientY:e.touches[0].clientY;i=Math.round(l-a.left),n=Math.round(o-a.top)}this.setRippleXY(i,n),this.setRippleStyles(!0),window.requestAnimationFrame(this.animFrameHandler.bind(this))}},S.prototype.upHandler_=function(e){e&&2!==e.detail&&window.setTimeout(function(){this.rippleElement_.classList.remove(this.CssClasses_.IS_VISIBLE)}.bind(this),0)},S.prototype.init=function(){if(this.element_){var e=this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT_IGNORE_EVENTS)||(this.rippleElement_=this.element_.querySelector("."+this.CssClasses_.RIPPLE),this.frameCount_=0,this.rippleSize_=0,this.x_=0,this.y_=0,this.ignoringMouseDown_=!1,this.boundDownHandler=this.downHandler_.bind(this),this.element_.addEventListener("mousedown",this.boundDownHandler),this.element_.addEventListener("touchstart",this.boundDownHandler),this.boundUpHandler=this.upHandler_.bind(this),this.element_.addEventListener("mouseup",this.boundUpHandler),this.element_.addEventListener("mouseleave",this.boundUpHandler),this.element_.addEventListener("touchend",this.boundUpHandler),this.element_.addEventListener("blur",this.boundUpHandler),this.getFrameCount=function(){return this.frameCount_},this.setFrameCount=function(e){this.frameCount_=e},this.getRippleElement=function(){return this.rippleElement_},this.setRippleXY=function(e,t){this.x_=e,this.y_=t},this.setRippleStyles=function(t){if(null!==this.rippleElement_){var s,i,n,a="translate("+this.x_+"px, "+this.y_+"px)";t?(i=this.Constant_.INITIAL_SCALE,n=this.Constant_.INITIAL_SIZE):(i=this.Constant_.FINAL_SCALE,n=this.rippleSize_+"px",e&&(a="translate("+this.boundWidth/2+"px, "+this.boundHeight/2+"px)")),s="translate(-50%, -50%) "+a+i,this.rippleElement_.style.webkitTransform=s,this.rippleElement_.style.msTransform=s,this.rippleElement_.style.transform=s,t?this.rippleElement_.classList.remove(this.CssClasses_.IS_ANIMATING):this.rippleElement_.classList.add(this.CssClasses_.IS_ANIMATING)}},this.animFrameHandler=function(){this.frameCount_-- >0?window.requestAnimationFrame(this.animFrameHandler.bind(this)):this.setRippleStyles(!1)})}},s.register({constructor:S,classAsString:"MaterialRipple",cssClass:"mdl-js-ripple-effect",widget:!1})}();
+//# sourceMappingURL=material.min.js.map
+</script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+<script>
+
+window.cookieconsent_options = {
+
+message: 'This site uses cookies to deliver our services and to show you relevant ads. By using our site, you acknowledge that you have read and understood our Privacy Policy. Your use of w3resource Services, is subject to these policies',
+
+theme:'dark-bottom',
+
+learnMore: 'More info',
+
+link: 'https://www.w3resource.com/privacy.php'
+
+};
+
+</script>
+<style type="text/css">
+
+.previousNext_bottom a:first-child  {
+
+float: left;
+
+margin-left:8px;
+
+}
+
+.previousNext_bottom a:last-child  {
+
+float: right;
+
+margin-right:8px;
+
+}
+
+</style>
+<script>
+
+window.onload = function() {
+
+//var old_links = document.getElementById("np").style.display = "none";
+
+var links = document.querySelector("ul.nav.nav-list").childNodes;
+
+var parentDiv = document.querySelector(".np");
+
+var parentDiv_bottom = document.querySelector(".np_bottom");
+
+var node = document.createElement("span"); 
+
+var node_bottom = document.createElement("span");
+
+node.setAttribute("class","previousNext");
+
+node_bottom.setAttribute("class","previousNext_bottom");
+
+parentDiv.appendChild(node);
+
+parentDiv_bottom.appendChild(node_bottom);
+
+for (var i=0; i < links.length; i++) {
+
+if(links[i].getAttribute("class")!=="nav-header" && links[i].children[0].getAttribute('href')===window.location.pathname){
+
+if(links[i-1].getAttribute("class")!=="nav-header"){
+
+var newLink = document.createElement("a");
+
+newLink.setAttribute("href",links[i-1].children[0].getAttribute("href"));
+
+var icon = document.createElement("i");
+
+icon.setAttribute("class","material-icons");
+
+icon.style.marginLeft = '40px';
+
+icon.style.color = '#fff';
+
+icon.style.verticalAlign = 'middle';
+
+var previousTxt = document.createTextNode('skip_previous');
+
+icon.appendChild(previousTxt);
+
+newLink.appendChild(icon);
+
+node.appendChild(newLink);
+
+//for bottom
+
+var newLink_bottom = document.createElement("a");
+
+newLink_bottom.setAttribute("href",links[i-1].children[0].getAttribute("href"));
+
+var previousTxt_bottom = document.createTextNode('Previous');
+
+newLink_bottom.appendChild(previousTxt_bottom);
+
+node_bottom.appendChild(newLink_bottom);
+
+}
+
+else if (links[i-1].getAttribute("class")==="nav-header"){
+
+var newLink = document.createElement("a");
+
+newLink.setAttribute("href",links[i-2].children[0].getAttribute("href"));
+
+var icon = document.createElement("i");
+
+icon.setAttribute("class","material-icons");
+
+icon.style.marginLeft = '40px';
+
+icon.style.color = '#fff';
+
+icon.style.verticalAlign = 'middle';
+
+var previousTxt = document.createTextNode('skip_previous');
+
+icon.appendChild(previousTxt);
+
+newLink.appendChild(icon);
+
+node.appendChild(newLink);
+
+//for bottom
+
+var newLink_bottom = document.createElement("a");
+
+newLink_bottom.setAttribute("href",links[i-2].children[0].getAttribute("href"));
+
+var previousTxt_bottom = document.createTextNode('Previous');
+
+newLink_bottom.appendChild(previousTxt_bottom);
+
+node_bottom.appendChild(newLink_bottom);
+
+}
+
+if(links[i+1].getAttribute("class")!=="nav-header") {
+
+var newLink = document.createElement("a");
+
+newLink.setAttribute("href",links[i+1].children[0].getAttribute("href"));
+
+var icon = document.createElement("i");
+
+icon.setAttribute("class","material-icons");
+
+icon.style.marginLeft = '30px';
+
+icon.style.color = '#fff';
+
+icon.style.verticalAlign = 'middle';
+
+var nextTxt = document.createTextNode('skip_next');
+
+icon.appendChild(nextTxt);
+
+newLink.appendChild(icon);
+
+node.appendChild(newLink);
+
+//for bottom
+
+var newLink_bottom = document.createElement("a");
+
+newLink_bottom.setAttribute("href",links[i+1].children[0].getAttribute("href"));
+
+var NextTxt_bottom = document.createTextNode('Next');
+
+newLink_bottom.appendChild(NextTxt_bottom);
+
+node_bottom.appendChild(newLink_bottom);
+
+}
+
+else if (links[i+1].getAttribute("class")==="nav-header") {
+
+var newLink = document.createElement("a");
+
+newLink.setAttribute("href",links[i+2].children[0].getAttribute("href"));
+
+var icon = document.createElement("i");
+
+icon.setAttribute("class","material-icons");
+
+icon.style.marginLeft = '30px';
+
+icon.style.color = '#fff';
+
+icon.style.verticalAlign = 'middle';
+
+var nextTxt = document.createTextNode('skip_next');
+
+icon.appendChild(nextTxt);
+
+newLink.appendChild(icon);
+
+node.appendChild(newLink);
+
+//for bottom
+
+var newLink_bottom = document.createElement("a");
+
+newLink_bottom.setAttribute("href",links[i+2].children[0].getAttribute("href"));
+
+var NextTxt_bottom = document.createTextNode('Next');
+
+newLink_bottom.appendChild(NextTxt_bottom);
+
+node_bottom.appendChild(newLink_bottom);
+
+}
+
+}
+
+}
+
+var prenext = document.querySelector("span.previousNext");
+
+var cln = prenext.cloneNode(true);
+
+}	
+
+</script>
+
+
+
+<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+
+(function(){
+
+	if(typeof _bsa !== 'undefined' && _bsa) {
+
+  		// format, zoneKey, segment:value, options
+
+  		_bsa.init('flexbar', 'CK7DCK7L', 'placement:w3resourcecom');
+
+  	}
+
+})();
+
+</script>
+
+<script>
+(function() {
+  if (typeof _bsa !== 'undefined' && _bsa) {
+    _bsa.init('custom', 'CE7DVK3N', 'placement:demo',
+    {
+      target: '#hovercard',
+      template: `
+<a href="##statlink##" class="hover-section" target="_blank" rel="noopener">
+  <div class="hover-banner" style="background-color: ##backgroundColor##">
+    <span style="color: ##backgroundColor##; background-color: ##textColor##CC" class="hover-ad">Sponsored</span>
+    <img class="hover-logo" src="##logo##">
+  </div>
+  <div class="hover-subset">
+    <img class="hover-icon" style="background-color: ##backgroundColor##" src="##image##">
+    <div class="hover-description"><strong>##company##</strong> ##description##</div>
+  </div>
+</a>
+    `
+        }
+      );
+  }
+})();
+</script>
+
+<style type="text/css">
+/* PrismJS 1.22.0
+https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+asciidoc+aspnet+asm6502+autohotkey+autoit+bash+basic+batch+bbcode+birb+bison+bnf+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cil+clojure+cmake+coffeescript+concurnas+csp+crystal+css-extras+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+firestore-security-rules+flow+fortran+ftl+gml+gcode+gdscript+gedcom+gherkin+git+glsl+go+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+http+hpkp+hsts+ichigojam+icon+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keyman+kotlin+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+lolcode+lua+makefile+markdown+markup-templating+matlab+mel+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nginx+nim+nix+nsis+objectivec+ocaml+opencl+oz+parigp+parser+pascal+pascaligo+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+q+qml+qore+r+racket+jsx+tsx+reason+regex+renpy+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+stan+iecst+stylus+swift+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+turtle+twig+typescript+typoscript+unrealscript+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+wiki+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=line-highlight+line-numbers+remove-initial-line-feed+inline-color+previewers+autoloader+toolbar+copy-to-clipboard */
+/**
+ * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
+ * @author Tim  Shedor
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	position: relative;
+	margin: .5em 0;
+	overflow: visible;
+	padding: 0;
+}
+pre[class*="language-"]>code {
+	position: relative;
+	border-left: 10px solid #358ccb;
+	box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+	background-color: #fdfdfd;
+	background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+	background-size: 3em 3em;
+	background-origin: content-box;
+	background-attachment: local;
+}
+
+code[class*="language-"] {
+	max-height: inherit;
+	height: inherit;
+	padding: 0 1em;
+	display: block;
+	overflow: auto;
+}
+
+/* Margin bottom to accommodate shadow */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background-color: #fdfdfd;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	position: relative;
+	padding: .2em;
+	border-radius: 0.3em;
+	color: #c92c2c;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	display: inline;
+	white-space: normal;
+}
+
+pre[class*="language-"]:before,
+pre[class*="language-"]:after {
+	content: '';
+	z-index: -2;
+	display: block;
+	position: absolute;
+	bottom: 0.75em;
+	left: 0.18em;
+	width: 40%;
+	height: 20%;
+	max-height: 13em;
+	box-shadow: 0px 13px 8px #979797;
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+
+pre[class*="language-"]:after {
+	right: 0.75em;
+	left: auto;
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #7D8B99;
+}
+
+.token.punctuation {
+	color: #5F6364;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #c92c2c;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+	color: #2f9c0a;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+	color: #a67f59;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+	color: #1990b8;
+}
+
+.token.regex,
+.token.important {
+	color: #e90;
+}
+
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.token.important {
+	font-weight: normal;
+}
+
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+@media screen and (max-width: 767px) {
+	pre[class*="language-"]:before,
+	pre[class*="language-"]:after {
+		bottom: 14px;
+		box-shadow: none;
+	}
+
+}
+
+/* Plugin styles: Line Numbers */
+pre[class*="language-"].line-numbers.line-numbers {
+	padding-left: 0;
+}
+
+pre[class*="language-"].line-numbers.line-numbers code {
+	padding-left: 3.8em;
+}
+
+pre[class*="language-"].line-numbers.line-numbers .line-numbers-rows {
+	left: 0;
+}
+
+/* Plugin styles: Line Highlight */
+pre[class*="language-"][data-line] {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+pre[data-line] code {
+	position: relative;
+	padding-left: 4em;
+}
+pre .line-highlight {
+	margin-top: 0;
+}
+
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em; /* Same as .prism’s padding-top */
+
+	background: hsla(24, 20%, 50%,.08);
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+
+	pointer-events: none;
+
+	line-height: inherit;
+	white-space: pre;
+}
+
+	.line-highlight:before,
+	.line-highlight[data-end]:after {
+		content: attr(data-start);
+		position: absolute;
+		top: .4em;
+		left: .6em;
+		min-width: 1em;
+		padding: 0 .5em;
+		background-color: hsla(24, 20%, 50%,.4);
+		color: hsl(24, 20%, 95%);
+		font: bold 65%/1.5 sans-serif;
+		text-align: center;
+		vertical-align: .3em;
+		border-radius: 999px;
+		text-shadow: none;
+		box-shadow: 0 1px white;
+	}
+
+	.line-highlight[data-end]:after {
+		content: attr(data-end);
+		top: auto;
+		bottom: .4em;
+	}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+	content: none;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows {
+	pointer-events: all;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
+	cursor: pointer;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
+	background-color: rgba(128, 128, 128, .2);
+}
+
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+
+span.inline-color-wrapper {
+	/*
+	 * The background image is the following SVG inline in base 64:
+	 *
+	 * <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2">
+	 *     <path fill="gray" d="M0 0h2v2H0z"/>
+	 *     <path fill="white" d="M0 0h1v1H0zM1 1h1v1H1z"/>
+	 * </svg>
+	 *
+	 * SVG-inlining explained:
+	 * https://stackoverflow.com/a/21626701/7595472
+	 */
+	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDIiPjxwYXRoIGZpbGw9ImdyYXkiIGQ9Ik0wIDBoMnYySDB6Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMXYxSDB6TTEgMWgxdjFIMXoiLz48L3N2Zz4=");
+	/* This is to prevent visual glitches where one pixel from the repeating pattern could be seen. */
+	background-position: center;
+	background-size: 110%;
+
+	display: inline-block;
+	height: 1.333ch;
+	width: 1.333ch;
+	margin: 0 .333ch;
+	box-sizing: border-box;
+	border: 1px solid white;
+	outline: 1px solid rgba(0,0,0,.5);
+	overflow: hidden;
+}
+
+span.inline-color {
+	display: block;
+	/* To prevent visual glitches again */
+	height: 120%;
+	width: 120%;
+}
+
+.prism-previewer,
+.prism-previewer:before,
+.prism-previewer:after {
+	position: absolute;
+	pointer-events: none;
+}
+.prism-previewer,
+.prism-previewer:after {
+	left: 50%;
+}
+.prism-previewer {
+	margin-top: -48px;
+	width: 32px;
+	height: 32px;
+	margin-left: -16px;
+
+	opacity: 0;
+	-webkit-transition: opacity .25s;
+	-o-transition: opacity .25s;
+	transition: opacity .25s;
+}
+.prism-previewer.flipped {
+	margin-top: 0;
+	margin-bottom: -48px;
+}
+.prism-previewer:before,
+.prism-previewer:after {
+	content: '';
+	position: absolute;
+	pointer-events: none;
+}
+.prism-previewer:before {
+	top: -5px;
+	right: -5px;
+	left: -5px;
+	bottom: -5px;
+	border-radius: 10px;
+	border: 5px solid #fff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+.prism-previewer:after {
+	top: 100%;
+	width: 0;
+	height: 0;
+	margin: 5px 0 0 -7px;
+	border: 7px solid transparent;
+	border-color: rgba(255, 0, 0, 0);
+	border-top-color: #fff;
+}
+.prism-previewer.flipped:after {
+	top: auto;
+	bottom: 100%;
+	margin-top: 0;
+	margin-bottom: 5px;
+	border-top-color: rgba(255, 0, 0, 0);
+	border-bottom-color: #fff;
+}
+.prism-previewer.active {
+	opacity: 1;
+}
+
+.prism-previewer-angle:before {
+	border-radius: 50%;
+	background: #fff;
+}
+.prism-previewer-angle:after {
+	margin-top: 4px;
+}
+.prism-previewer-angle svg {
+	width: 32px;
+	height: 32px;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+.prism-previewer-angle[data-negative] svg {
+	-webkit-transform: scaleX(-1) rotate(-90deg);
+	-moz-transform: scaleX(-1) rotate(-90deg);
+	-ms-transform: scaleX(-1) rotate(-90deg);
+	-o-transform: scaleX(-1) rotate(-90deg);
+	transform: scaleX(-1) rotate(-90deg);
+}
+.prism-previewer-angle circle {
+	fill: transparent;
+	stroke: hsl(200, 10%, 20%);
+	stroke-opacity: 0.9;
+	stroke-width: 32;
+	stroke-dasharray: 0, 500;
+}
+
+.prism-previewer-gradient {
+	background-image: linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb), linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
+	background-size: 10px 10px;
+	background-position: 0 0, 5px 5px;
+
+	width: 64px;
+	margin-left: -32px;
+}
+.prism-previewer-gradient:before {
+	content: none;
+}
+.prism-previewer-gradient div {
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	border-radius: 10px;
+	border: 5px solid #fff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.prism-previewer-color {
+	background-image: linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb), linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
+	background-size: 10px 10px;
+	background-position: 0 0, 5px 5px;
+}
+.prism-previewer-color:before {
+	background-color: inherit;
+	background-clip: padding-box;
+}
+
+.prism-previewer-easing {
+	margin-top: -76px;
+	margin-left: -30px;
+	width: 60px;
+	height: 60px;
+	background: #333;
+}
+.prism-previewer-easing.flipped {
+	margin-bottom: -116px;
+}
+.prism-previewer-easing svg {
+	width: 60px;
+	height: 60px;
+}
+.prism-previewer-easing circle {
+	fill: hsl(200, 10%, 20%);
+	stroke: white;
+}
+.prism-previewer-easing path {
+	fill: none;
+	stroke: white;
+	stroke-linecap: round;
+	stroke-width: 4;
+}
+.prism-previewer-easing line {
+	stroke: white;
+	stroke-opacity: 0.5;
+	stroke-width: 2;
+}
+
+@-webkit-keyframes prism-previewer-time {
+	0% {
+		stroke-dasharray: 0, 500;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 100, 500;
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dasharray: 0, 500;
+		stroke-dashoffset: -100;
+	}
+}
+
+@-o-keyframes prism-previewer-time {
+	0% {
+		stroke-dasharray: 0, 500;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 100, 500;
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dasharray: 0, 500;
+		stroke-dashoffset: -100;
+	}
+}
+
+@-moz-keyframes prism-previewer-time {
+	0% {
+		stroke-dasharray: 0, 500;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 100, 500;
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dasharray: 0, 500;
+		stroke-dashoffset: -100;
+	}
+}
+
+@keyframes prism-previewer-time {
+	0% {
+		stroke-dasharray: 0, 500;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 100, 500;
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dasharray: 0, 500;
+		stroke-dashoffset: -100;
+	}
+}
+
+.prism-previewer-time:before {
+	border-radius: 50%;
+	background: #fff;
+}
+.prism-previewer-time:after {
+	margin-top: 4px;
+}
+.prism-previewer-time svg {
+	width: 32px;
+	height: 32px;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+.prism-previewer-time circle {
+	fill: transparent;
+	stroke: hsl(200, 10%, 20%);
+	stroke-opacity: 0.9;
+	stroke-width: 32;
+	stroke-dasharray: 0, 500;
+	stroke-dashoffset: 0;
+	-webkit-animation: prism-previewer-time linear infinite 3s;
+	-moz-animation: prism-previewer-time linear infinite 3s;
+	-o-animation: prism-previewer-time linear infinite 3s;
+	animation: prism-previewer-time linear infinite 3s;
+}
+div.code-toolbar {
+	position: relative;
+}
+
+div.code-toolbar > .toolbar {
+	position: absolute;
+	top: .3em;
+	right: .2em;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+	opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+	opacity: 1;
+}
+
+div.code-toolbar > .toolbar .toolbar-item {
+	display: inline-block;
+}
+
+div.code-toolbar > .toolbar a {
+	cursor: pointer;
+}
+
+div.code-toolbar > .toolbar button {
+	background: none;
+	border: 0;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	-webkit-user-select: none; /* for button */
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button,
+div.code-toolbar > .toolbar span {
+	color: #bbb;
+	font-size: .8em;
+	padding: 0 .5em;
+	background: #f5f2f0;
+	background: rgba(224, 224, 224, 0.2);
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+	border-radius: .5em;
+}
+
+div.code-toolbar > .toolbar a:hover,
+div.code-toolbar > .toolbar a:focus,
+div.code-toolbar > .toolbar button:hover,
+div.code-toolbar > .toolbar button:focus,
+div.code-toolbar > .toolbar span:hover,
+div.code-toolbar > .toolbar span:focus {
+	color: inherit;
+	text-decoration: none;
+}
+</style>
+<script src="/assets/prism.js"></script>
+<script>
+var goTop = document.createElement("a");
+
+goTop.innerHTML = '<i class="material-icons">&#xE5D8;</i>';
+
+goTop.style = "bottom:0;right:27%;position:absolute;z-index: 9999";
+
+goTop.setAttribute("href", "#h_one");
+
+document.body.appendChild(goTop);
+
+</script>
+</div>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8a947f62b8d3ab68","serverTiming":{"name":{"cfL4":true}},"version":"2024.7.0","token":"5dac2d8f3d14427aab9e85de0419fad9"}' crossorigin="anonymous"></script>
+</body>
+</html>
